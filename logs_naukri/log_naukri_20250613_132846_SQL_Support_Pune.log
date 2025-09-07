@@ -1,0 +1,77 @@
+2025-06-13 13:28:46,107 - INFO     - [main_workflow_naukri.py:419] - =================================================
+2025-06-13 13:28:46,107 - INFO     - [main_workflow_naukri.py:420] - Logging initialized for Naukri. Log file: C:\AI Use and Deveopment\Naukri Job hunting\logs_naukri\log_naukri_20250613_132846_SQL_Support_Pune.log
+2025-06-13 13:28:46,107 - INFO     - [main_workflow_naukri.py:421] - Starting Job Automation Workflow (Naukri.com)
+2025-06-13 13:28:46,107 - INFO     - [main_workflow_naukri.py:422] - Base Directory: C:\AI Use and Deveopment\Naukri Job hunting
+2025-06-13 13:28:46,122 - INFO     - [main_workflow_naukri.py:423] - Using Excel File: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-06-13 13:28:46,123 - INFO     - [main_workflow_naukri.py:424] - Search Keywords: 'SQL Support, SQL Developer'
+2025-06-13 13:28:46,123 - INFO     - [main_workflow_naukri.py:425] - Base Location: 'Pune'
+2025-06-13 13:28:46,123 - INFO     - [main_workflow_naukri.py:426] - Workflow Phases: 2 to 2
+2025-06-13 13:28:46,124 - INFO     - [main_workflow_naukri.py:427] - =================================================
+2025-06-13 13:28:46,124 - INFO     - [main_workflow_naukri.py:435] - Checking accessibility of Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-06-13 13:28:46,125 - ERROR    - [main_workflow_naukri.py:453] - PERMISSION ERROR: Cannot access Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-06-13 13:28:46,125 - ERROR    - [main_workflow_naukri.py:454] - The file might be open in Excel or another application.
+2025-06-13 13:29:10,024 - INFO     - [main_workflow_naukri.py:457] - Retrying file access in 5 seconds...
+2025-06-13 13:29:15,025 - INFO     - [main_workflow_naukri.py:450] - Excel file 'naukri_jobs_master_list.xlsx' is accessible.
+2025-06-13 13:29:15,026 - INFO     - [main_workflow_naukri.py:467] - ########## Starting Naukri Workflow ##########
+2025-06-13 13:29:15,027 - INFO     - [main_workflow_naukri.py:471] - Naukri workflow configured to run from Phase 2 to Phase 2.
+2025-06-13 13:29:15,028 - INFO     - [main_workflow_naukri.py:492] - --- Skipping Phase 1 (Naukri) (Config) ---
+2025-06-13 13:29:15,028 - INFO     - [main_workflow_naukri.py:497] - --- Phase 2: Scrape Job Details (Naukri) ---
+2025-06-13 13:29:15,029 - INFO     - [phase2_detail_scraper_naukri.py:243] - Initiating Phase 2: Naukri Job Detail Scraping
+2025-06-13 13:29:15,029 - INFO     - [phase1_list_scraper_naukri.py:59] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-06-13 13:29:15,950 - INFO     - [phase1_list_scraper_naukri.py:72] - Successfully connected to Chrome debugger.
+2025-06-13 13:29:16,467 - INFO     - [phase1_list_scraper_naukri.py:76] - Initial page in connected browser: https://www.naukri.com/sql-support-sql-developer-jobs-in-pune-2?jobAge=1&experience=2
+2025-06-13 13:29:16,468 - INFO     - [phase2_detail_scraper_naukri.py:180] - Starting detailed scraping. Overwrite Phase 1 data: False
+2025-06-13 13:29:16,619 - INFO     - [phase2_detail_scraper_naukri.py:196] - Found 80 rows to process with status in ['New', 'Error - Scrape Job Details'].
+2025-06-13 13:29:16,620 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 2/81 | Job: 'Urgent Hiring For Business Analyst Python SQL Developer' ---
+2025-06-13 13:29:19,795 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-urgent-hiring-for-business-analyst-python-sql-developer-coriolis-tech-pune-0-to-1-years-050625016292: InvalidSelectorException
+2025-06-13 13:29:19,797 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:19,797 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 3/81 | Job: 'Developer - SQL' ---
+2025-06-13 13:29:22,853 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-developer-sql-farshore-software-development-p-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-0-to-2-years-180225501243: InvalidSelectorException
+2025-06-13 13:29:22,854 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:22,854 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 4/81 | Job: 'Futter Developer' ---
+2025-06-13 13:29:25,797 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-futter-developer-valorous-technologies-pune-1-to-4-years-101224501320: InvalidSelectorException
+2025-06-13 13:29:25,798 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:25,798 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 5/81 | Job: 'Reconciliation Developer' ---
+2025-06-13 13:29:29,218 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-reconciliation-developer-atyeti-pune-chennai-1-to-6-years-230425004187: InvalidSelectorException
+2025-06-13 13:29:29,220 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:29,220 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 6/81 | Job: 'Saviynt Developers' ---
+2025-06-13 13:29:32,092 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-saviynt-developers-krazy-mantra-group-of-companies-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-220125500622: InvalidSelectorException
+2025-06-13 13:29:32,093 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:32,093 - INFO     - [phase2_detail_scraper_naukri.py:227] - Saving progress to Excel after 5 rows...
+2025-06-13 13:29:32,168 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 7/81 | Job: 'VB, SQL Developers' ---
+2025-06-13 13:29:35,051 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-vb-sql-developers-sibella-technologies-pvt-ltd-pune-2-to-4-years-190325509997: InvalidSelectorException
+2025-06-13 13:29:35,052 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:35,053 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 8/81 | Job: 'Zuora Revpro Developer' ---
+2025-06-13 13:29:38,079 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-zuora-revpro-developer-jade-global-software-pvt-ltd-pune-2-to-6-years-230525926068: InvalidSelectorException
+2025-06-13 13:29:38,080 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:38,080 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 9/81 | Job: 'SQL Developer / Data Engineer' ---
+2025-06-13 13:29:40,853 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-sql-developer-data-engineer-itfirst-consultants-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-7-years-041024501752: InvalidSelectorException
+2025-06-13 13:29:40,854 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:40,854 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 10/81 | Job: 'RPS Xceptor Developer' ---
+2025-06-13 13:29:43,899 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-rps-xceptor-developer-wipro-limited-pune-3-to-8-years-030625924091: InvalidSelectorException
+2025-06-13 13:29:43,900 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:43,901 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 11/81 | Job: 'OIC Developer' ---
+2025-06-13 13:29:46,344 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-oic-developer-jade-global-software-pvt-ltd-kolkata-hyderabad-pune-2-to-6-years-140525917589: InvalidSelectorException
+2025-06-13 13:29:46,345 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:46,345 - INFO     - [phase2_detail_scraper_naukri.py:227] - Saving progress to Excel after 10 rows...
+2025-06-13 13:29:46,423 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 12/81 | Job: 'Elixir Developer' ---
+2025-06-13 13:29:49,274 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-elixir-developer-maerskglobalservicescentres-india-pvtltd-pune-bengaluru-3-to-7-years-190525914133: InvalidSelectorException
+2025-06-13 13:29:49,275 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:49,276 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 13/81 | Job: 'CNSA Developer' ---
+2025-06-13 13:29:52,272 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-cnsa-developer-ibm-india-pvt-limited-pune-3-to-8-years-090625911329: InvalidSelectorException
+2025-06-13 13:29:52,273 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:52,273 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 14/81 | Job: 'NOSQL Database Engineer III- (MongoDB)' ---
+2025-06-13 13:29:55,861 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-nosql-database-engineer-iii-mongodb-rackspace-technology-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-5-to-8-years-050625501451: InvalidSelectorException
+2025-06-13 13:29:55,862 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:55,862 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 15/81 | Job: 'OIC Developer' ---
+2025-06-13 13:29:58,639 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-oic-developer-jade-global-software-pvt-ltd-kolkata-hyderabad-pune-3-to-5-years-140525917803: InvalidSelectorException
+2025-06-13 13:29:58,640 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:29:58,641 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 16/81 | Job: 'OIC Developer' ---
+2025-06-13 13:30:02,030 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-oic-developer-jade-global-software-pvt-ltd-pune-3-to-5-years-040625927672: InvalidSelectorException
+2025-06-13 13:30:02,031 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:30:02,032 - INFO     - [phase2_detail_scraper_naukri.py:227] - Saving progress to Excel after 15 rows...
+2025-06-13 13:30:02,106 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 17/81 | Job: 'Dev Ops Developer \/ SRE' ---
+2025-06-13 13:30:05,159 - ERROR    - [phase2_detail_scraper_naukri.py:163] - Major error on page https://www.naukri.com/job-listings-dev-ops-developer-sre-systems-plus-solutions-pvt-ltd-pune-5-to-7-years-260425500060: InvalidSelectorException
+2025-06-13 13:30:05,160 - ERROR    - [phase2_detail_scraper_naukri.py:223] -   Scraping failed. Issues: CRITICAL: InvalidSelectorException
+2025-06-13 13:30:05,160 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 18/81 | Job: 'Jaspersoft Developer - 005' ---
+2025-06-13 13:30:08,981 - INFO     - [phase2_detail_scraper_naukri.py:260] - Phase 2 run finished.

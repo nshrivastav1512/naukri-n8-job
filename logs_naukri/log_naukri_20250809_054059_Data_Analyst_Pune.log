@@ -1,0 +1,280 @@
+2025-08-09 05:40:59,017 - INFO     - [main_workflow_naukri.py:444] - =================================================
+2025-08-09 05:40:59,018 - INFO     - [main_workflow_naukri.py:445] - Logging initialized for Naukri. Log file: C:\AI Use and Deveopment\Naukri Job hunting v1\logs_naukri\log_naukri_20250809_054059_Data_Analyst_Pune.log
+2025-08-09 05:40:59,018 - INFO     - [main_workflow_naukri.py:446] - Starting Job Automation Workflow (Naukri.com)
+2025-08-09 05:40:59,018 - INFO     - [main_workflow_naukri.py:447] - Base Directory: C:\AI Use and Deveopment\Naukri Job hunting v1
+2025-08-09 05:40:59,018 - INFO     - [main_workflow_naukri.py:448] - Using Excel File: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-09 05:40:59,018 - INFO     - [main_workflow_naukri.py:449] - Search Keywords: 'Data Analyst'
+2025-08-09 05:40:59,018 - INFO     - [main_workflow_naukri.py:450] - Base Location: 'Pune'
+2025-08-09 05:40:59,018 - INFO     - [main_workflow_naukri.py:451] - Workflow Phases: 1 to 2
+2025-08-09 05:40:59,018 - INFO     - [main_workflow_naukri.py:452] - =================================================
+2025-08-09 05:40:59,018 - INFO     - [main_workflow_naukri.py:460] - Checking accessibility of Excel file: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-09 05:40:59,019 - INFO     - [main_workflow_naukri.py:475] - Excel file 'naukri_jobs_master_list.xlsx' is accessible.
+2025-08-09 05:40:59,019 - INFO     - [main_workflow_naukri.py:492] - ########## Starting Naukri Workflow ##########
+2025-08-09 05:40:59,019 - INFO     - [main_workflow_naukri.py:496] - Naukri workflow configured to run from Phase 1 to Phase 2.
+2025-08-09 05:40:59,019 - INFO     - [main_workflow_naukri.py:508] - --- Phase 1: Scrape Job List (Naukri) ---
+2025-08-09 05:40:59,019 - INFO     - [phase1_list_scraper_naukri.py:562] - Initiating Phase 1: Naukri Job List Scraping
+2025-08-09 05:40:59,019 - INFO     - [phase1_list_scraper_naukri.py:572] - Reading existing Excel file to build duplicate check list: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-09 05:40:59,228 - INFO     - [phase1_list_scraper_naukri.py:577] - Found 100 existing job URLs in the master file.
+2025-08-09 05:40:59,229 - INFO     - [phase1_list_scraper_naukri.py:69] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-08-09 05:41:19,171 - INFO     - [phase1_list_scraper_naukri.py:82] - Successfully connected to Chrome debugger.
+2025-08-09 05:41:19,677 - INFO     - [phase1_list_scraper_naukri.py:86] - Initial page in connected browser: chrome://new-tab-page/
+2025-08-09 05:41:19,677 - INFO     - [phase1_list_scraper_naukri.py:160] -   Building URL with Keywords: 'Data Analyst' and Location: 'Pune'
+2025-08-09 05:41:19,677 - INFO     - [phase1_list_scraper_naukri.py:201] -   Applying Filter 'Job Freshness: Posting Date, Job Age (e.g., Past 7 days)': Past 24 hours (jobAge=1)
+2025-08-09 05:41:19,678 - INFO     - [phase1_list_scraper_naukri.py:201] -   Applying Filter 'Experience Level: Years of Work Experience': 2 (experience=2)
+2025-08-09 05:41:19,678 - INFO     - [phase1_list_scraper_naukri.py:211] - Constructed Naukri Search URL (Page 1): https://www.naukri.com/data-analyst-jobs-in-pune?jobAge=1&experience=2
+2025-08-09 05:41:19,678 - INFO     - [phase1_list_scraper_naukri.py:363] - Navigating to initial search URL (Page 1): https://www.naukri.com/data-analyst-jobs-in-pune?jobAge=1&experience=2
+2025-08-09 05:41:26,364 - INFO     - [phase1_list_scraper_naukri.py:385] - --- Processing Page 1 ---
+2025-08-09 05:41:32,251 - INFO     - [phase1_list_scraper_naukri.py:402] - Found 20 job card elements on page 1.
+2025-08-09 05:41:35,550 - INFO     - [phase1_list_scraper_naukri.py:434] - Extracted 20 new unique jobs from page 1.
+2025-08-09 05:41:35,551 - INFO     - [phase1_list_scraper_naukri.py:370] - Minimum unique jobs target (10) met. Stopping pagination.
+2025-08-09 05:41:35,551 - INFO     - [phase1_list_scraper_naukri.py:451] - Finished scraping Naukri. Found 20 new unique jobs in this session.
+2025-08-09 05:41:35,551 - INFO     - [phase1_list_scraper_naukri.py:463] - Processing 20 scraped Naukri jobs for Excel: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-09 05:41:35,590 - INFO     - [phase1_list_scraper_naukri.py:542] - Saving Naukri DataFrame (120 rows) to Excel...
+2025-08-09 05:41:35,690 - INFO     - [phase1_list_scraper_naukri.py:547] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-09 05:41:35,691 - INFO     - [phase1_list_scraper_naukri.py:618] - Phase 1 (Naukri) Summary: Added 20 unique jobs to Excel. Skipped 0 duplicates found during scraping.
+2025-08-09 05:41:35,691 - INFO     - [phase1_list_scraper_naukri.py:619] - Phase 1 (Naukri) completed.
+2025-08-09 05:41:35,691 - INFO     - [main_workflow_naukri.py:513] - --- Phase 1 (Naukri) Completed (Added: 20, Skipped Duplicates: 0) ---
+2025-08-09 05:41:35,691 - INFO     - [main_workflow_naukri.py:516] - Phase 1 (Naukri) duration: 36.67s.
+2025-08-09 05:41:35,692 - INFO     - [main_workflow_naukri.py:522] - --- Phase 2: Scrape Job Details (Naukri) ---
+2025-08-09 05:41:35,692 - INFO     - [phase2_detail_scraper_naukri.py:328] - Initiating Phase 2: Naukri Job Detail Scraping
+2025-08-09 05:41:35,692 - INFO     - [phase1_list_scraper_naukri.py:69] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-08-09 05:41:36,544 - INFO     - [phase1_list_scraper_naukri.py:82] - Successfully connected to Chrome debugger.
+2025-08-09 05:41:37,048 - INFO     - [phase1_list_scraper_naukri.py:86] - Initial page in connected browser: https://www.naukri.com/data-analyst-jobs-in-pune?jobAge=1&experience=2
+2025-08-09 05:41:37,048 - INFO     - [phase2_detail_scraper_naukri.py:251] - Starting detailed scraping. Overwrite Phase 1 data: False
+2025-08-09 05:41:37,118 - INFO     - [phase2_detail_scraper_naukri.py:267] - Found 95 rows to process with status in ['New', 'Error - Scrape Job Details'].
+2025-08-09 05:41:37,119 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 27/121 | Job: 'Lead Analyst - Managed Service Change (IntelliMatch, SQL)' ---
+2025-08-09 05:41:57,714 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-lead-analyst-managed-service-change-intellimatch-sql-fis-global-business-solutions-india-pvt-ltd-pune-2-to-4-years-010825505790: TimeoutException
+2025-08-09 05:41:57,715 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:41:57,715 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 28/121 | Job: 'Business Analyst' ---
+2025-08-09 05:42:01,769 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:42:01,770 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 29/121 | Job: 'Senior Associate_Azure Data Engineer' ---
+2025-08-09 05:42:05,117 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:42:05,117 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 30/121 | Job: 'Incentive Compensation Analyst' ---
+2025-08-09 05:42:07,867 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:42:07,868 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 31/121 | Job: 'Service Business Analyst' ---
+2025-08-09 05:42:11,333 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:42:11,333 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 5 rows...
+2025-08-09 05:42:11,537 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 32/121 | Job: 'Staff enterprise technology engineer' ---
+2025-08-09 05:42:14,089 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:42:14,089 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 33/121 | Job: 'Unit Manager - Risk/Senior Unit Manager - Risk' ---
+2025-08-09 05:42:34,672 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-unit-manager-risk-senior-unit-manager-risk-bajaj-finserv-direct-limited-pune-2-to-5-years-310725912025: TimeoutException
+2025-08-09 05:42:34,673 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:42:34,673 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 34/121 | Job: 'Performance Engineer' ---
+2025-08-09 05:42:55,772 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-performance-engineer-zs-associates-india-pvt-ltd-pune-2-to-5-years-310725927116: TimeoutException
+2025-08-09 05:42:55,773 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:42:55,774 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 35/121 | Job: 'Business Systems Analyst' ---
+2025-08-09 05:42:59,391 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:42:59,391 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 36/121 | Job: 'Client KYC Senior Analyst' ---
+2025-08-09 05:43:02,673 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:43:02,673 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 10 rows...
+2025-08-09 05:43:02,869 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 37/121 | Job: 'S&C GN - SC&O Ã¢â‚¬â€œ SC Digital MAG Cloud - Analyst' ---
+2025-08-09 05:43:06,478 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:43:06,479 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 38/121 | Job: 'Data Scientist' ---
+2025-08-09 05:43:09,866 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:43:09,867 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 39/121 | Job: 'S&C GN - SC&O - S&P - Business Solutions -  Analyst' ---
+2025-08-09 05:43:13,103 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:43:13,104 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 40/121 | Job: 'Data Scientist' ---
+2025-08-09 05:43:16,290 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:43:16,291 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 41/121 | Job: 'Back Office Automation Engineer' ---
+2025-08-09 05:43:37,291 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-back-office-automation-engineer-acuity-knowledge-partners-pune-gurugram-bengaluru-2-to-5-years-010825012226: TimeoutException
+2025-08-09 05:43:37,291 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:43:37,292 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 15 rows...
+2025-08-09 05:43:37,466 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 42/121 | Job: 'GN SC&O - S&P - I&F Decision Sci Practitioner Sr Analyst' ---
+2025-08-09 05:43:40,471 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:43:40,471 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 43/121 | Job: 'Java Developer BA4 India Perm' ---
+2025-08-09 05:44:01,271 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-java-developer-ba4-india-perm-barclays-shared-services-pune-1-to-6-years-020825500628: TimeoutException
+2025-08-09 05:44:01,272 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:44:01,272 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 44/121 | Job: 'European VAT Specialist 1' ---
+2025-08-09 05:44:04,648 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:44:04,648 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 45/121 | Job: 'Software Engineer Intermediate' ---
+2025-08-09 05:44:07,179 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:44:07,180 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 46/121 | Job: 'Senior Associate - Global Mobility Tax' ---
+2025-08-09 05:44:09,703 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:44:09,703 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 20 rows...
+2025-08-09 05:44:09,914 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 47/121 | Job: 'Project Manager II - Technical Project and Program Management' ---
+2025-08-09 05:44:12,609 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:44:12,609 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 48/121 | Job: 'Software Engineer Intermediate' ---
+2025-08-09 05:44:15,319 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:44:15,320 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 49/121 | Job: 'Associate Product Engineer / Product Engineer - Mechanical' ---
+2025-08-09 05:44:17,954 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:44:17,954 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 50/121 | Job: 'Full Stack Engineer' ---
+2025-08-09 05:44:20,481 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:44:20,482 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 51/121 | Job: 'Application Development & Support Analyst' ---
+2025-08-09 05:44:24,633 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:44:24,634 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 25 rows...
+2025-08-09 05:44:24,850 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 52/121 | Job: 'Full Stack Engineer' ---
+2025-08-09 05:44:45,675 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-full-stack-engineer-kalypso-it-solutions-noida-new-delhi-pune-bengaluru-2-to-6-years-020825501017: TimeoutException
+2025-08-09 05:44:45,676 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:44:45,676 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 53/121 | Job: 'Software Engineer, Development' ---
+2025-08-09 05:45:06,326 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-software-engineer-development-icertis-solutions-pune-2-to-3-years-020825500529: TimeoutException
+2025-08-09 05:45:06,327 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:45:06,327 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 54/121 | Job: 'Functional Analyst' ---
+2025-08-09 05:45:09,984 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:45:09,984 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 55/121 | Job: 'Senior Associate - M&E' ---
+2025-08-09 05:45:30,591 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-senior-associate-m-e-leadership-for-equity-pune-2-to-4-years-010825502657: TimeoutException
+2025-08-09 05:45:30,592 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:45:30,592 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 56/121 | Job: 'Data scientist Fraud modelling -- US Client (Analytics)' ---
+2025-08-09 05:45:33,492 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:45:33,492 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 30 rows...
+2025-08-09 05:45:36,823 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 57/121 | Job: 'SAP ABAP Developer ECC' ---
+2025-08-09 05:45:39,550 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:45:39,551 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 58/121 | Job: 'SAP PI /PO Developer' ---
+2025-08-09 05:45:42,785 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:45:42,786 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 59/121 | Job: 'Senior Accountant' ---
+2025-08-09 05:45:45,841 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:45:45,841 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 60/121 | Job: 'Marketing Automation Specialist' ---
+2025-08-09 05:45:48,548 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:45:48,549 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 61/121 | Job: 'Digital Advertising Analyst' ---
+2025-08-09 05:45:52,141 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:45:52,142 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 35 rows...
+2025-08-09 05:45:52,349 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 62/121 | Job: 'Ai Ml Engineer' ---
+2025-08-09 05:45:55,260 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:45:55,260 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 63/121 | Job: 'Technical Business Analyst' ---
+2025-08-09 05:45:58,014 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:45:58,014 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 64/121 | Job: 'Executive' ---
+2025-08-09 05:46:01,246 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:46:01,246 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 65/121 | Job: 'Executive - Industry Research Data Sourcing  (Off-roll)' ---
+2025-08-09 05:46:04,330 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:46:04,330 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 66/121 | Job: 'Business Technology Solutions Consultant' ---
+2025-08-09 05:46:24,889 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-business-technology-solutions-consultant-zs-associates-india-pvt-ltd-pune-bengaluru-2-to-6-years-310725927135: TimeoutException
+2025-08-09 05:46:24,890 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:46:24,890 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 40 rows...
+2025-08-09 05:46:25,111 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 67/121 | Job: 'Decision Analytics Associate Consultant - RWD' ---
+2025-08-09 05:46:45,729 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-decision-analytics-associate-consultant-rwd-zs-associates-india-pvt-ltd-pune-2-to-6-years-310725927114: TimeoutException
+2025-08-09 05:46:45,730 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:46:45,731 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 68/121 | Job: 'Cost Optimization Engineer' ---
+2025-08-09 05:46:49,735 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:46:49,735 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 69/121 | Job: 'Senior Mis Reporting Executive' ---
+2025-08-09 05:47:10,369 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-senior-mis-reporting-executive-exl-pune-2-to-6-years-160725029919: TimeoutException
+2025-08-09 05:47:10,370 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:47:10,370 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 70/121 | Job: 'Coverage Support Analyst (IPR / KAM Support)' ---
+2025-08-09 05:47:13,452 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:47:13,452 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 71/121 | Job: 'Advanced Data Science Associate' ---
+2025-08-09 05:47:34,034 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-advanced-data-science-associate-zs-associates-india-pvt-ltd-pune-1-to-4-years-310725927085: TimeoutException
+2025-08-09 05:47:34,035 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:47:34,035 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 45 rows...
+2025-08-09 05:47:34,276 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 72/121 | Job: 'PAQ - Business Analyst - BSG' ---
+2025-08-09 05:47:37,287 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:47:37,287 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 73/121 | Job: 'Experienced JAVA Developer' ---
+2025-08-09 05:47:39,746 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:47:39,746 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 74/121 | Job: 'Sales Operations' ---
+2025-08-09 05:47:43,020 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:47:43,020 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 75/121 | Job: 'Workplace Delivery Co-ordinator' ---
+2025-08-09 05:47:45,849 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:47:45,849 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 76/121 | Job: 'Senior Associate-Record To Report' ---
+2025-08-09 05:47:48,334 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:47:48,334 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 50 rows...
+2025-08-09 05:47:48,562 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 77/121 | Job: 'Power BI Developer' ---
+2025-08-09 05:47:51,020 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:47:51,020 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 78/121 | Job: 'Financial Analyst' ---
+2025-08-09 05:47:54,461 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:47:54,462 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 79/121 | Job: 'Senior HR Associate - Business Analyst' ---
+2025-08-09 05:48:14,856 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-senior-hr-associate-business-analyst-zs-associates-india-pvt-ltd-pune-gurugram-bengaluru-2-to-5-years-310725927144: TimeoutException
+2025-08-09 05:48:14,856 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:48:14,857 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 80/121 | Job: 'Record To Report Ops Associate' ---
+2025-08-09 05:48:18,155 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:48:18,155 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 81/121 | Job: 'Record To Report Ops Associate' ---
+2025-08-09 05:48:21,524 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:48:21,524 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 55 rows...
+2025-08-09 05:48:21,674 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 82/121 | Job: 'Accounting Associate - Level II' ---
+2025-08-09 05:48:24,872 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:48:24,872 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 83/121 | Job: 'Associate - CRDU- RDV & C' ---
+2025-08-09 05:48:28,124 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:48:28,124 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 84/121 | Job: 'Production Support Engineer - Associate' ---
+2025-08-09 05:48:31,390 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:48:31,391 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 85/121 | Job: 'Operation Support Analyst' ---
+2025-08-09 05:48:33,834 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:48:33,834 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 86/121 | Job: 'Associate Software Analyst' ---
+2025-08-09 05:48:36,609 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:48:36,609 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 60 rows...
+2025-08-09 05:48:36,841 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 87/121 | Job: 'Associate-CRDU- RDV & C' ---
+2025-08-09 05:48:39,506 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:48:39,507 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 88/121 | Job: 'PDS Mechanical (Product data services)' ---
+2025-08-09 05:48:43,343 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:48:43,343 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 89/121 | Job: 'Assistant Manager' ---
+2025-08-09 05:49:04,214 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-assistant-manager-mahindra-mahindra-limited-pune-1-to-4-years-010825500429: TimeoutException
+2025-08-09 05:49:04,215 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:49:04,216 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 90/121 | Job: 'Junior Finance Analyst - INTERN' ---
+2025-08-09 05:49:06,942 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:49:06,942 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 91/121 | Job: 'Fund Accountant' ---
+2025-08-09 05:49:27,472 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-fund-accountant-apex-fund-services-llp-pune-0-to-8-years-010825503358: TimeoutException
+2025-08-09 05:49:27,473 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:49:27,473 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 65 rows...
+2025-08-09 05:49:27,713 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 92/121 | Job: 'Markit EDM' ---
+2025-08-09 05:49:30,910 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:49:30,910 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 93/121 | Job: 'Senior Software Engineer' ---
+2025-08-09 05:49:51,680 - ERROR    - [phase2_detail_scraper_naukri.py:233] - Major scraping error on page https://www.naukri.com/job-listings-senior-software-engineer-bajaj-finserv-direct-limited-pune-2-to-6-years-310725912856: TimeoutException
+2025-08-09 05:49:51,681 - ERROR    - [phase2_detail_scraper_naukri.py:293] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-09 05:49:51,681 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 94/121 | Job: 'Engineer Process Unity Consultant, AS' ---
+2025-08-09 05:49:54,667 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:49:54,668 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 95/121 | Job: 'Finance Associate (Finance Modelling, NPV) opening at Redaptive, Pune' ---
+2025-08-09 05:49:58,102 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:49:58,103 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 96/121 | Job: 'Electrical Engineer' ---
+2025-08-09 05:50:00,692 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:00,692 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 70 rows...
+2025-08-09 05:50:00,931 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 97/121 | Job: 'Avaloq Tester' ---
+2025-08-09 05:50:03,502 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:03,502 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 98/121 | Job: 'AVP - Global reporting' ---
+2025-08-09 05:50:06,428 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:06,428 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 99/121 | Job: 'Associate Renewal Sales Representative - India' ---
+2025-08-09 05:50:10,016 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:10,016 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 100/121 | Job: 'Site Reliability Engineer (SRE) - Associate' ---
+2025-08-09 05:50:13,317 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:13,318 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 101/121 | Job: 'Risk modelling/Credit risk-- US MNC (analytics)' ---
+2025-08-09 05:50:16,361 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:16,361 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 75 rows...
+2025-08-09 05:50:16,600 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 102/121 | Job: 'Data Quality Analyst' ---
+2025-08-09 05:50:18,986 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:18,987 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 103/121 | Job: 'Data Analyst - SQL' ---
+2025-08-09 05:50:22,200 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:22,200 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 104/121 | Job: 'Analyst' ---
+2025-08-09 05:50:25,504 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:25,504 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 105/121 | Job: 'Product Developer' ---
+2025-08-09 05:50:28,542 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:28,542 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 106/121 | Job: 'Data Analyst' ---
+2025-08-09 05:50:31,646 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:31,646 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 80 rows...
+2025-08-09 05:50:31,887 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 107/121 | Job: 'Senior Analyst' ---
+2025-08-09 05:50:34,611 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:34,611 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 108/121 | Job: 'Data Analytics Team Leader' ---
+2025-08-09 05:50:37,420 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:37,421 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 109/121 | Job: 'Data Engineer-Data Integration' ---
+2025-08-09 05:50:39,864 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:39,864 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 110/121 | Job: 'Data Engineer-Data Integration' ---
+2025-08-09 05:50:42,557 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:42,558 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 111/121 | Job: 'Senior Executive - Research (Retainer)' ---
+2025-08-09 05:50:45,791 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:45,791 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 85 rows...
+2025-08-09 05:50:45,935 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 112/121 | Job: 'Data Engineer' ---
+2025-08-09 05:50:49,333 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:49,334 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 113/121 | Job: 'Software Development Lead' ---
+2025-08-09 05:50:52,216 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:52,216 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 114/121 | Job: 'Senior Analyst' ---
+2025-08-09 05:50:55,271 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:55,272 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 115/121 | Job: 'Marketing Assistant' ---
+2025-08-09 05:50:57,777 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:50:57,777 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 116/121 | Job: 'Bus Sys Analysis Advisor (Certinia PSA Analyst)' ---
+2025-08-09 05:51:01,010 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:51:01,010 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 90 rows...
+2025-08-09 05:51:01,258 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 117/121 | Job: 'Unit Manager - Risk' ---
+2025-08-09 05:51:04,648 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:51:04,649 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 118/121 | Job: 'HRSS Associate' ---
+2025-08-09 05:51:07,102 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:51:07,102 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 119/121 | Job: 'Share Register Analyst' ---
+2025-08-09 05:51:10,365 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:51:10,365 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 120/121 | Job: 'DWS COO Division Business Manager - Cost Mgmt. & Analytics' ---
+2025-08-09 05:51:13,711 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:51:13,711 - INFO     - [phase2_detail_scraper_naukri.py:278] - --- Processing Row 121/121 | Job: 'Accounts Payable Specialist (Cost Accountant)' ---
+2025-08-09 05:51:16,780 - INFO     - [phase2_detail_scraper_naukri.py:289] -   Successfully processed. Status -> Ready for AI
+2025-08-09 05:51:16,780 - INFO     - [phase2_detail_scraper_naukri.py:297] - Saving progress to Excel after 95 rows...
+2025-08-09 05:51:17,120 - INFO     - [phase2_detail_scraper_naukri.py:307] - Finished processing all designated rows. Performing final save...
+2025-08-09 05:51:17,366 - INFO     - [phase2_detail_scraper_naukri.py:345] - Phase 2 run finished.
+2025-08-09 05:51:17,367 - INFO     - [main_workflow_naukri.py:526] - --- Phase 2 (Naukri) Completed ---
+2025-08-09 05:51:17,368 - INFO     - [main_workflow_naukri.py:529] - Phase 2 (Naukri) duration: 581.68s.
+2025-08-09 05:51:17,368 - INFO     - [main_workflow_naukri.py:584] - #################################################
+2025-08-09 05:51:17,369 - INFO     - [main_workflow_naukri.py:585] - Naukri Workflow Completed (Phases 1-2).
+2025-08-09 05:51:17,370 - INFO     - [main_workflow_naukri.py:587] - Review log file for detailed information.
+2025-08-09 05:51:17,370 - INFO     - [main_workflow_naukri.py:588] - #################################################
+2025-08-09 05:51:17,370 - INFO     - [main_workflow_naukri.py:618] - Total Naukri Workflow Runtime: 618.35 seconds.
+2025-08-09 05:51:17,371 - INFO     - [main_workflow_naukri.py:619] - Phase Durations (seconds): {'Phase 1': 36.67216491699219, 'Phase 2': 581.6760833263397}
+2025-08-09 05:51:17,372 - INFO     - [main_workflow_naukri.py:620] - Naukri script execution finished.

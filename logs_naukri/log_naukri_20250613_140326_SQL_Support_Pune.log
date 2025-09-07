@@ -1,0 +1,84 @@
+2025-06-13 14:03:26,264 - INFO     - [main_workflow_naukri.py:437] - =================================================
+2025-06-13 14:03:26,265 - INFO     - [main_workflow_naukri.py:438] - Logging initialized for Naukri. Log file: C:\AI Use and Deveopment\Naukri Job hunting\logs_naukri\log_naukri_20250613_140326_SQL_Support_Pune.log
+2025-06-13 14:03:26,265 - INFO     - [main_workflow_naukri.py:439] - Starting Job Automation Workflow (Naukri.com)
+2025-06-13 14:03:26,265 - INFO     - [main_workflow_naukri.py:440] - Base Directory: C:\AI Use and Deveopment\Naukri Job hunting
+2025-06-13 14:03:26,266 - INFO     - [main_workflow_naukri.py:441] - Using Excel File: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-06-13 14:03:26,266 - INFO     - [main_workflow_naukri.py:442] - Search Keywords: 'SQL Support, SQL Developer'
+2025-06-13 14:03:26,266 - INFO     - [main_workflow_naukri.py:443] - Base Location: 'Pune'
+2025-06-13 14:03:26,267 - INFO     - [main_workflow_naukri.py:444] - Workflow Phases: 2 to 2
+2025-06-13 14:03:26,267 - INFO     - [main_workflow_naukri.py:445] - =================================================
+2025-06-13 14:03:26,267 - INFO     - [main_workflow_naukri.py:453] - Checking accessibility of Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-06-13 14:03:26,268 - INFO     - [main_workflow_naukri.py:468] - Excel file 'naukri_jobs_master_list.xlsx' is accessible.
+2025-06-13 14:03:26,268 - INFO     - [main_workflow_naukri.py:485] - ########## Starting Naukri Workflow ##########
+2025-06-13 14:03:26,268 - INFO     - [main_workflow_naukri.py:489] - Naukri workflow configured to run from Phase 2 to Phase 2.
+2025-06-13 14:03:26,268 - INFO     - [main_workflow_naukri.py:510] - --- Skipping Phase 1 (Naukri) (Config) ---
+2025-06-13 14:03:26,269 - INFO     - [main_workflow_naukri.py:515] - --- Phase 2: Scrape Job Details (Naukri) ---
+2025-06-13 14:03:26,269 - INFO     - [phase2_detail_scraper_naukri.py:260] - Initiating Phase 2: Naukri Job Detail Scraping
+2025-06-13 14:03:26,269 - INFO     - [phase1_list_scraper_naukri.py:59] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-06-13 14:03:27,180 - INFO     - [phase1_list_scraper_naukri.py:72] - Successfully connected to Chrome debugger.
+2025-06-13 14:03:27,689 - INFO     - [phase1_list_scraper_naukri.py:76] - Initial page in connected browser: https://www.naukri.com/job-listings-dev-ops-developer-sre-systems-plus-solutions-pvt-ltd-pune-5-to-7-years-260425500060
+2025-06-13 14:03:27,689 - INFO     - [phase2_detail_scraper_naukri.py:197] - Starting detailed scraping. Overwrite Phase 1 data: False
+2025-06-13 14:03:27,834 - INFO     - [phase2_detail_scraper_naukri.py:213] - Found 80 rows to process with status in ['New', 'Error - Scrape Job Details'].
+2025-06-13 14:03:27,835 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 2/81 | Job: 'Urgent Hiring For Business Analyst Python SQL Developer' ---
+2025-06-13 14:03:33,311 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:03:33,312 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 3/81 | Job: 'Developer - SQL' ---
+2025-06-13 14:03:37,056 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:03:37,057 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 4/81 | Job: 'Futter Developer' ---
+2025-06-13 14:03:40,302 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:03:40,303 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 5/81 | Job: 'Reconciliation Developer' ---
+2025-06-13 14:03:44,220 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:03:44,220 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 6/81 | Job: 'Saviynt Developers' ---
+2025-06-13 14:03:48,259 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:03:48,259 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 5 rows...
+2025-06-13 14:03:48,342 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 7/81 | Job: 'VB, SQL Developers' ---
+2025-06-13 14:03:51,878 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:03:51,878 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 8/81 | Job: 'Zuora Revpro Developer' ---
+2025-06-13 14:03:56,809 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:03:56,810 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 9/81 | Job: 'SQL Developer / Data Engineer' ---
+2025-06-13 14:04:00,500 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:04:00,500 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 10/81 | Job: 'RPS Xceptor Developer' ---
+2025-06-13 14:04:04,168 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:04:04,169 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 11/81 | Job: 'OIC Developer' ---
+2025-06-13 14:04:09,080 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:04:09,081 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 10 rows...
+2025-06-13 14:04:09,164 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 12/81 | Job: 'Elixir Developer' ---
+2025-06-13 14:04:12,690 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:04:12,691 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 13/81 | Job: 'CNSA Developer' ---
+2025-06-13 14:04:16,632 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:04:16,632 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 14/81 | Job: 'NOSQL Database Engineer III- (MongoDB)' ---
+2025-06-13 14:04:21,309 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:04:21,309 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 15/81 | Job: 'OIC Developer' ---
+2025-06-13 14:04:26,766 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:04:26,767 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 16/81 | Job: 'OIC Developer' ---
+2025-06-13 14:04:31,242 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:04:31,243 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 15 rows...
+2025-06-13 14:04:31,321 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 17/81 | Job: 'Dev Ops Developer \/ SRE' ---
+2025-06-13 14:04:35,566 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:04:35,566 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 18/81 | Job: 'Jaspersoft Developer - 005' ---
+2025-06-13 14:04:40,649 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:04:40,650 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 19/81 | Job: 'Jaspersoft Developer - 002' ---
+2025-06-13 14:04:45,839 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:04:45,839 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 20/81 | Job: 'Jaspersoft Developer' ---
+2025-06-13 14:04:51,606 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:04:51,607 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 21/81 | Job: 'Jaspersoft Developer - 006' ---
+2025-06-13 14:04:55,979 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:04:55,980 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 20 rows...
+2025-06-13 14:04:56,085 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 22/81 | Job: 'Research Analyst - Mumbai (Sion)' ---
+2025-06-13 14:05:01,133 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:05:01,134 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 23/81 | Job: 'Research Analyst' ---
+2025-06-13 14:05:06,145 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:05:06,146 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 24/81 | Job: 'Research Analyst' ---
+2025-06-13 14:05:10,168 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:05:10,169 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 25/81 | Job: 'Research Analyst' ---
+2025-06-13 14:05:14,598 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:05:14,599 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 26/81 | Job: 'Research Analyst' ---
+2025-06-13 14:05:17,917 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:05:17,917 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 25 rows...
+2025-06-13 14:05:18,004 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 27/81 | Job: 'Research Analyst' ---
+2025-06-13 14:05:22,621 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:05:22,622 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 28/81 | Job: 'Alternative Research Analyst' ---
+2025-06-13 14:05:27,317 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:05:27,317 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 29/81 | Job: 'Research Analyst' ---
+2025-06-13 14:05:30,874 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-06-13 14:05:30,875 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 30/81 | Job: 'Research Analyst' ---
+2025-06-13 14:05:34,406 - INFO     - [phase2_detail_scraper_naukri.py:277] - Phase 2 run finished.

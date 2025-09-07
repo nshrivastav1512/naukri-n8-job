@@ -1,0 +1,44 @@
+2025-06-13 12:39:57,541 - INFO     - [main_workflow_naukri.py:415] - =================================================
+2025-06-13 12:39:57,542 - INFO     - [main_workflow_naukri.py:416] - Logging initialized for Naukri. Log file: C:\AI Use and Deveopment\Naukri Job hunting\logs_naukri\log_naukri_20250613_123957_Data_analyst_Mumbai.log
+2025-06-13 12:39:57,542 - INFO     - [main_workflow_naukri.py:417] - Starting Job Automation Workflow (Naukri.com)
+2025-06-13 12:39:57,542 - INFO     - [main_workflow_naukri.py:418] - Base Directory: C:\AI Use and Deveopment\Naukri Job hunting
+2025-06-13 12:39:57,557 - INFO     - [main_workflow_naukri.py:419] - Using Excel File: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-06-13 12:39:57,558 - INFO     - [main_workflow_naukri.py:420] - Search Keywords: 'Data analyst, research analyst'
+2025-06-13 12:39:57,558 - INFO     - [main_workflow_naukri.py:421] - Base Location: 'Mumbai'
+2025-06-13 12:39:57,558 - INFO     - [main_workflow_naukri.py:422] - Workflow Phases: 1 to 1
+2025-06-13 12:39:57,558 - INFO     - [main_workflow_naukri.py:423] - =================================================
+2025-06-13 12:39:57,559 - INFO     - [main_workflow_naukri.py:431] - Checking accessibility of Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-06-13 12:39:57,559 - INFO     - [main_workflow_naukri.py:446] - Excel file 'naukri_jobs_master_list.xlsx' is accessible.
+2025-06-13 12:39:57,559 - INFO     - [main_workflow_naukri.py:463] - ########## Starting Naukri Workflow ##########
+2025-06-13 12:39:57,560 - INFO     - [main_workflow_naukri.py:467] - Naukri workflow configured to run from Phase 1 to Phase 1.
+2025-06-13 12:39:57,560 - INFO     - [main_workflow_naukri.py:479] - --- Phase 1: Scrape Job List (Naukri) ---
+2025-06-13 12:39:57,560 - INFO     - [phase1_list_scraper_naukri.py:535] - Initiating Phase 1: Naukri Job List Scraping
+2025-06-13 12:39:57,560 - INFO     - [phase1_list_scraper_naukri.py:59] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-06-13 12:39:58,454 - INFO     - [phase1_list_scraper_naukri.py:72] - Successfully connected to Chrome debugger.
+2025-06-13 12:39:58,968 - INFO     - [phase1_list_scraper_naukri.py:76] - Initial page in connected browser: https://www.naukri.com/sql-support-sql-developer-jobs-in-pune
+2025-06-13 12:39:58,968 - INFO     - [phase1_list_scraper_naukri.py:141] -   Applying Keywords: 'Data analyst, research analyst'
+2025-06-13 12:39:58,969 - INFO     - [phase1_list_scraper_naukri.py:156] -   Applying Base Location (l=): 'Mumbai'
+2025-06-13 12:39:58,969 - INFO     - [phase1_list_scraper_naukri.py:173] -   Applying Job Freshness: Posting Date, Job Age (e.g., Past 7 days): Past 24 hours (Code: 1)
+2025-06-13 12:39:58,969 - INFO     - [phase1_list_scraper_naukri.py:173] -   Applying Experience Level: Years of Work Experience: 2 (Code: 2)
+2025-06-13 12:39:58,970 - INFO     - [phase1_list_scraper_naukri.py:199] - Constructed Naukri Search URL (Page 1): https://www.naukri.com/data-analyst-research-analyst-jobs?k=Data+analyst%2C+research+analyst&l=Mumbai&jobAge=1&experience=2&nignbevent_src=jobsearchDeskGNB
+2025-06-13 12:39:58,970 - INFO     - [phase1_list_scraper_naukri.py:350] - Navigating to initial search URL (Page 1): https://www.naukri.com/data-analyst-research-analyst-jobs?k=Data+analyst%2C+research+analyst&l=Mumbai&jobAge=1&experience=2&nignbevent_src=jobsearchDeskGNB
+2025-06-13 12:40:05,943 - INFO     - [phase1_list_scraper_naukri.py:361] - --- Processing Page 1 ---
+2025-06-13 12:40:12,075 - INFO     - [phase1_list_scraper_naukri.py:384] - Found 20 job card elements on page 1.
+2025-06-13 12:40:19,888 - INFO     - [phase1_list_scraper_naukri.py:419] - Extracted 20 new unique jobs from page 1.
+2025-06-13 12:40:19,889 - INFO     - [phase1_list_scraper_naukri.py:427] - Minimum unique jobs target (10) met. Stopping pagination.
+2025-06-13 12:40:19,890 - INFO     - [phase1_list_scraper_naukri.py:442] - Finished scraping Naukri. Found 20 new unique jobs in this session.
+2025-06-13 12:40:19,890 - INFO     - [phase1_list_scraper_naukri.py:453] - Processing 20 scraped Naukri jobs for Excel: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-06-13 12:40:20,171 - INFO     - [phase1_list_scraper_naukri.py:504] - Deduplication: 20 new unique Naukri jobs to add, 0 duplicates skipped.
+2025-06-13 12:40:20,176 - INFO     - [phase1_list_scraper_naukri.py:516] - Saving Naukri DataFrame (40 rows) to Excel...
+2025-06-13 12:40:20,262 - INFO     - [phase1_list_scraper_naukri.py:519] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-06-13 12:40:20,263 - INFO     - [phase1_list_scraper_naukri.py:573] - Phase 1 (Naukri) Summary: Added 20 unique jobs to Excel. Skipped 0 duplicates.
+2025-06-13 12:40:20,264 - INFO     - [phase1_list_scraper_naukri.py:574] - Phase 1 (Naukri) completed.
+2025-06-13 12:40:20,264 - INFO     - [main_workflow_naukri.py:484] - --- Phase 1 (Naukri) Completed (Added: 20, Skipped Duplicates: 0) ---
+2025-06-13 12:40:20,264 - INFO     - [main_workflow_naukri.py:487] - Phase 1 (Naukri) duration: 22.70s.
+2025-06-13 12:40:20,265 - INFO     - [main_workflow_naukri.py:555] - #################################################
+2025-06-13 12:40:20,266 - INFO     - [main_workflow_naukri.py:556] - Naukri Workflow Completed (Phases 1-1).
+2025-06-13 12:40:20,266 - INFO     - [main_workflow_naukri.py:558] - Review log file for detailed information.
+2025-06-13 12:40:20,267 - INFO     - [main_workflow_naukri.py:559] - #################################################
+2025-06-13 12:40:20,267 - INFO     - [main_workflow_naukri.py:589] - Total Naukri Workflow Runtime: 22.73 seconds.
+2025-06-13 12:40:20,268 - INFO     - [main_workflow_naukri.py:590] - Phase Durations (seconds): {'Phase 1': 22.70456886291504}
+2025-06-13 12:40:20,269 - INFO     - [main_workflow_naukri.py:591] - Naukri script execution finished.

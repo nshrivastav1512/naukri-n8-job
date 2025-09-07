@@ -1,0 +1,25 @@
+2025-08-03 16:11:41,585 - INFO     - [main_workflow_naukri.py:449] - =================================================
+2025-08-03 16:11:41,586 - INFO     - [main_workflow_naukri.py:450] - Logging initialized for Naukri. Log file: C:\AI Use and Deveopment\Naukri Job hunting\logs_naukri\log_naukri_20250803_161141_Data_Analyst_Pune.log
+2025-08-03 16:11:41,586 - INFO     - [main_workflow_naukri.py:451] - Starting Job Automation Workflow (Naukri.com)
+2025-08-03 16:11:41,587 - INFO     - [main_workflow_naukri.py:452] - Base Directory: C:\AI Use and Deveopment\Naukri Job hunting
+2025-08-03 16:11:41,588 - INFO     - [main_workflow_naukri.py:453] - Using Excel File: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 16:11:41,588 - INFO     - [main_workflow_naukri.py:454] - Search Keywords: 'Data Analyst'
+2025-08-03 16:11:41,589 - INFO     - [main_workflow_naukri.py:455] - Base Location: 'Pune'
+2025-08-03 16:11:41,589 - INFO     - [main_workflow_naukri.py:456] - Workflow Phases: 1 to 2
+2025-08-03 16:11:41,590 - INFO     - [main_workflow_naukri.py:457] - =================================================
+2025-08-03 16:11:41,591 - INFO     - [main_workflow_naukri.py:465] - Checking accessibility of Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 16:11:41,592 - INFO     - [main_workflow_naukri.py:480] - Excel file 'naukri_jobs_master_list.xlsx' is accessible.
+2025-08-03 16:11:41,593 - INFO     - [main_workflow_naukri.py:497] - ########## Starting Naukri Workflow ##########
+2025-08-03 16:11:41,593 - INFO     - [main_workflow_naukri.py:501] - Naukri workflow configured to run from Phase 1 to Phase 2.
+2025-08-03 16:11:41,594 - INFO     - [main_workflow_naukri.py:513] - --- Phase 1: Scrape Job List (Naukri) ---
+2025-08-03 16:11:41,595 - INFO     - [phase1_list_scraper_naukri.py:557] - Initiating Phase 1: Naukri Job List Scraping
+2025-08-03 16:11:41,595 - INFO     - [phase1_list_scraper_naukri.py:74] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-08-03 16:11:42,489 - INFO     - [phase1_list_scraper_naukri.py:87] - Successfully connected to Chrome debugger.
+2025-08-03 16:11:43,014 - INFO     - [phase1_list_scraper_naukri.py:91] - Initial page in connected browser: chrome://new-tab-page/
+2025-08-03 16:11:43,015 - INFO     - [phase1_list_scraper_naukri.py:165] -   Building URL with Keywords: 'Data Analyst' and Location: 'Pune'
+2025-08-03 16:11:43,015 - INFO     - [phase1_list_scraper_naukri.py:206] -   Applying Filter 'Job Freshness: Posting Date, Job Age (e.g., Past 7 days)': Past 24 hours (jobAge=1)
+2025-08-03 16:11:43,016 - INFO     - [phase1_list_scraper_naukri.py:206] -   Applying Filter 'Experience Level: Years of Work Experience': 2 (experience=2)
+2025-08-03 16:11:43,017 - INFO     - [phase1_list_scraper_naukri.py:216] - Constructed Naukri Search URL (Page 1): https://www.naukri.com/data-analyst-jobs-in-pune?jobAge=1&experience=2
+2025-08-03 16:11:43,018 - INFO     - [phase1_list_scraper_naukri.py:366] - Navigating to initial search URL (Page 1): https://www.naukri.com/data-analyst-jobs-in-pune?jobAge=1&experience=2
+2025-08-03 16:11:49,790 - INFO     - [phase1_list_scraper_naukri.py:377] - --- Processing Page 1 ---
+2025-08-03 16:11:55,350 - INFO     - [phase1_list_scraper_naukri.py:400] - Found 20 job card elements on page 1.

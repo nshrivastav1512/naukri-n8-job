@@ -1,0 +1,132 @@
+2025-08-01 22:18:35,892 - INFO     - [main_workflow_naukri.py:437] - =================================================
+2025-08-01 22:18:35,893 - INFO     - [main_workflow_naukri.py:438] - Logging initialized for Naukri. Log file: C:\AI Use and Deveopment\Naukri Job hunting\logs_naukri\log_naukri_20250801_221835_Data_Analyst_Pune.log
+2025-08-01 22:18:35,893 - INFO     - [main_workflow_naukri.py:439] - Starting Job Automation Workflow (Naukri.com)
+2025-08-01 22:18:35,894 - INFO     - [main_workflow_naukri.py:440] - Base Directory: C:\AI Use and Deveopment\Naukri Job hunting
+2025-08-01 22:18:35,895 - INFO     - [main_workflow_naukri.py:441] - Using Excel File: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-01 22:18:35,896 - INFO     - [main_workflow_naukri.py:442] - Search Keywords: 'Data Analyst'
+2025-08-01 22:18:35,896 - INFO     - [main_workflow_naukri.py:443] - Base Location: 'Pune'
+2025-08-01 22:18:35,897 - INFO     - [main_workflow_naukri.py:444] - Workflow Phases: 1 to 2
+2025-08-01 22:18:35,897 - INFO     - [main_workflow_naukri.py:445] - =================================================
+2025-08-01 22:18:35,898 - INFO     - [main_workflow_naukri.py:453] - Checking accessibility of Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-01 22:18:35,899 - INFO     - [main_workflow_naukri.py:468] - Excel file 'naukri_jobs_master_list.xlsx' is accessible.
+2025-08-01 22:18:35,900 - INFO     - [main_workflow_naukri.py:485] - ########## Starting Naukri Workflow ##########
+2025-08-01 22:18:35,901 - INFO     - [main_workflow_naukri.py:489] - Naukri workflow configured to run from Phase 1 to Phase 2.
+2025-08-01 22:18:35,902 - INFO     - [main_workflow_naukri.py:501] - --- Phase 1: Scrape Job List (Naukri) ---
+2025-08-01 22:18:35,902 - INFO     - [phase1_list_scraper_naukri.py:536] - Initiating Phase 1: Naukri Job List Scraping
+2025-08-01 22:18:35,903 - INFO     - [phase1_list_scraper_naukri.py:59] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-08-01 22:18:36,816 - INFO     - [phase1_list_scraper_naukri.py:72] - Successfully connected to Chrome debugger.
+2025-08-01 22:18:37,345 - INFO     - [phase1_list_scraper_naukri.py:76] - Initial page in connected browser: chrome://new-tab-page/
+2025-08-01 22:18:37,346 - INFO     - [phase1_list_scraper_naukri.py:150] -   Building URL with Keywords: 'Data Analyst' and Location: 'Pune'
+2025-08-01 22:18:37,347 - INFO     - [phase1_list_scraper_naukri.py:191] -   Applying Filter 'Job Freshness: Posting Date, Job Age (e.g., Past 7 days)': Past 24 hours (jobAge=1)
+2025-08-01 22:18:37,348 - INFO     - [phase1_list_scraper_naukri.py:191] -   Applying Filter 'Experience Level: Years of Work Experience': 2 (experience=2)
+2025-08-01 22:18:37,349 - INFO     - [phase1_list_scraper_naukri.py:201] - Constructed Naukri Search URL (Page 1): https://www.naukri.com/data-analyst-jobs-in-pune?jobAge=1&experience=2
+2025-08-01 22:18:37,349 - INFO     - [phase1_list_scraper_naukri.py:351] - Navigating to initial search URL (Page 1): https://www.naukri.com/data-analyst-jobs-in-pune?jobAge=1&experience=2
+2025-08-01 22:18:44,297 - INFO     - [phase1_list_scraper_naukri.py:362] - --- Processing Page 1 ---
+2025-08-01 22:18:51,412 - INFO     - [phase1_list_scraper_naukri.py:385] - Found 20 job card elements on page 1.
+2025-08-01 22:19:03,587 - INFO     - [phase1_list_scraper_naukri.py:420] - Extracted 20 new unique jobs from page 1.
+2025-08-01 22:19:03,588 - INFO     - [phase1_list_scraper_naukri.py:358] - Navigating to Page 2: https://www.naukri.com/data-analyst-jobs-in-pune-2?jobAge=1&experience=2
+2025-08-01 22:19:10,566 - INFO     - [phase1_list_scraper_naukri.py:362] - --- Processing Page 2 ---
+2025-08-01 22:19:16,750 - INFO     - [phase1_list_scraper_naukri.py:385] - Found 20 job card elements on page 2.
+2025-08-01 22:19:29,249 - INFO     - [phase1_list_scraper_naukri.py:420] - Extracted 20 new unique jobs from page 2.
+2025-08-01 22:19:29,250 - INFO     - [phase1_list_scraper_naukri.py:428] - Minimum unique jobs target (30) met. Stopping pagination.
+2025-08-01 22:19:29,251 - INFO     - [phase1_list_scraper_naukri.py:443] - Finished scraping Naukri. Found 40 new unique jobs in this session.
+2025-08-01 22:19:29,252 - INFO     - [phase1_list_scraper_naukri.py:454] - Processing 40 scraped Naukri jobs for Excel: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-01 22:19:29,628 - INFO     - [phase1_list_scraper_naukri.py:505] - Deduplication: 35 new unique Naukri jobs to add, 5 duplicates skipped.
+2025-08-01 22:19:29,644 - INFO     - [phase1_list_scraper_naukri.py:517] - Saving Naukri DataFrame (110 rows) to Excel...
+2025-08-01 22:19:29,815 - INFO     - [phase1_list_scraper_naukri.py:520] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-01 22:19:29,817 - INFO     - [phase1_list_scraper_naukri.py:574] - Phase 1 (Naukri) Summary: Added 35 unique jobs to Excel. Skipped 5 duplicates.
+2025-08-01 22:19:29,817 - INFO     - [phase1_list_scraper_naukri.py:575] - Phase 1 (Naukri) completed.
+2025-08-01 22:19:29,818 - INFO     - [main_workflow_naukri.py:506] - --- Phase 1 (Naukri) Completed (Added: 35, Skipped Duplicates: 5) ---
+2025-08-01 22:19:29,819 - INFO     - [main_workflow_naukri.py:509] - Phase 1 (Naukri) duration: 53.92s.
+2025-08-01 22:19:29,819 - INFO     - [main_workflow_naukri.py:515] - --- Phase 2: Scrape Job Details (Naukri) ---
+2025-08-01 22:19:29,820 - INFO     - [phase2_detail_scraper_naukri.py:260] - Initiating Phase 2: Naukri Job Detail Scraping
+2025-08-01 22:19:29,821 - INFO     - [phase1_list_scraper_naukri.py:59] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-08-01 22:19:30,722 - INFO     - [phase1_list_scraper_naukri.py:72] - Successfully connected to Chrome debugger.
+2025-08-01 22:19:31,240 - INFO     - [phase1_list_scraper_naukri.py:76] - Initial page in connected browser: https://www.naukri.com/data-analyst-jobs-in-pune-2?jobAge=1&experience=2
+2025-08-01 22:19:31,241 - INFO     - [phase2_detail_scraper_naukri.py:197] - Starting detailed scraping. Overwrite Phase 1 data: False
+2025-08-01 22:19:31,351 - INFO     - [phase2_detail_scraper_naukri.py:213] - Found 77 rows to process with status in ['New', 'Error - Scrape Job Details'].
+2025-08-01 22:19:31,352 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 28/111 | Job: 'Alternative Research Analyst' ---
+2025-08-01 22:19:51,828 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-alternative-research-analyst-iss-corporate-solutions-mumbai-2-to-3-years-150525502023: TimeoutException
+2025-08-01 22:19:51,830 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 22:19:51,831 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 32/111 | Job: 'Research Analyst' ---
+2025-08-01 22:20:12,461 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-research-analyst-datamatics-business-solutions-ltd-mumbai-3-to-8-years-120625500994: TimeoutException
+2025-08-01 22:20:12,463 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 22:20:12,463 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 37/111 | Job: 'Sql Developer' ---
+2025-08-01 22:20:16,049 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 22:20:16,050 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 38/111 | Job: 'Software Engineer' ---
+2025-08-01 22:20:19,477 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 22:20:19,478 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 39/111 | Job: 'Data engineer - PL/SQL' ---
+2025-08-01 22:20:23,079 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 22:20:23,080 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 5 rows...
+2025-08-01 22:20:23,253 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 40/111 | Job: 'Technical Business Analyst' ---
+2025-08-01 22:20:27,105 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 22:20:27,106 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 41/111 | Job: 'Business Analyst II' ---
+2025-08-01 22:20:31,285 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 22:20:31,286 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 42/111 | Job: 'Senior Test Engineer - Investment Data Platform' ---
+2025-08-01 22:20:35,047 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 22:20:35,048 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 43/111 | Job: 'Developer' ---
+2025-08-01 22:20:38,904 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 22:20:38,905 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 44/111 | Job: 'Developer - Business Intelligence' ---
+2025-08-01 22:20:42,548 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 22:20:42,549 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 10 rows...
+2025-08-01 22:20:42,718 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 45/111 | Job: 'Data Quality Profiling Developer (Oracle APEX)' ---
+2025-08-01 22:20:47,053 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 22:20:47,054 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 46/111 | Job: 'Senior Associate_Azure Data Engineer' ---
+2025-08-01 22:20:50,538 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 22:20:50,539 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 47/111 | Job: 'Application Developer' ---
+2025-08-01 22:20:55,015 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 22:20:55,015 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 48/111 | Job: 'Engineer, Sanctions & Embargo Screening, AS' ---
+2025-08-01 22:20:58,978 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 22:20:58,979 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 49/111 | Job: 'Staff enterprise technology engineer' ---
+2025-08-01 22:21:02,955 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 22:21:02,956 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 15 rows...
+2025-08-01 22:21:03,073 - CRITICAL - [phase2_detail_scraper_naukri.py:254] - Critical error in Phase 2 processing: BP INCORPORATE INTERNATIONALTM is worlds largest e-commerce marketplace. provides a platform for vendors across the worldwide to connect with millions of customers. The platform has the widest assortment of products from thousands of national, international regional brands across diverse categories like Mobiles, Electronics, Fashion accessories, Apparel Footwear, Automotive, Kids, Health, Home Kitchen, Sports Books. BP INCORPORATE INTERNATIONAL TM has a network of more than 100000 Merchants/Brands, caters to the shopping needs of customers across 190 country.
+lt;/pgt; cannot be used in worksheets.
+Traceback (most recent call last):
+  File "c:\AI Use and Deveopment\Naukri Job hunting\phase2_detail_scraper_naukri.py", line 244, in process_excel_for_details
+    df.fillna('').to_excel(excel_filepath, index=False, engine='openpyxl')
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Python313\Lib\site-packages\pandas\core\generic.py", line 2417, in to_excel
+    formatter.write(
+    ~~~~~~~~~~~~~~~^
+        excel_writer,
+        ^^^^^^^^^^^^^
+    ...<6 lines>...
+        engine_kwargs=engine_kwargs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python313\Lib\site-packages\pandas\io\formats\excel.py", line 952, in write
+    writer._write_cells(
+    ~~~~~~~~~~~~~~~~~~~^
+        formatted_cells,
+        ^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        freeze_panes=freeze_panes,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python313\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 490, in _write_cells
+    xcell.value, fmt = self._value_with_fmt(cell.val)
+    ^^^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\openpyxl\cell\cell.py", line 218, in value
+    self._bind_value(value)
+    ~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Python313\Lib\site-packages\openpyxl\cell\cell.py", line 197, in _bind_value
+    value = self.check_string(value)
+  File "C:\Python313\Lib\site-packages\openpyxl\cell\cell.py", line 165, in check_string
+    raise IllegalCharacterError(f"{value} cannot be used in worksheets.")
+openpyxl.utils.exceptions.IllegalCharacterError: BP INCORPORATE INTERNATIONALTM is worlds largest e-commerce marketplace. provides a platform for vendors across the worldwide to connect with millions of customers. The platform has the widest assortment of products from thousands of national, international regional brands across diverse categories like Mobiles, Electronics, Fashion accessories, Apparel Footwear, Automotive, Kids, Health, Home Kitchen, Sports Books. BP INCORPORATE INTERNATIONAL TM has a network of more than 100000 Merchants/Brands, caters to the shopping needs of customers across 190 country.
+lt;/pgt; cannot be used in worksheets.
+2025-08-01 22:21:03,087 - INFO     - [phase2_detail_scraper_naukri.py:277] - Phase 2 run finished.
+2025-08-01 22:21:03,088 - WARNING  - [main_workflow_naukri.py:518] - Phase 2 (Naukri) encountered critical errors.
+2025-08-01 22:21:03,088 - INFO     - [main_workflow_naukri.py:522] - Phase 2 (Naukri) duration: 93.27s.
+2025-08-01 22:21:03,089 - INFO     - [main_workflow_naukri.py:577] - #################################################
+2025-08-01 22:21:03,089 - INFO     - [main_workflow_naukri.py:578] - Naukri Workflow Completed (Phases 1-2).
+2025-08-01 22:21:03,090 - INFO     - [main_workflow_naukri.py:580] - Review log file for detailed information.
+2025-08-01 22:21:03,090 - INFO     - [main_workflow_naukri.py:581] - #################################################
+2025-08-01 22:21:03,091 - INFO     - [main_workflow_naukri.py:611] - Total Naukri Workflow Runtime: 147.20 seconds.
+2025-08-01 22:21:03,092 - INFO     - [main_workflow_naukri.py:612] - Phase Durations (seconds): {'Phase 1': 53.91721534729004, 'Phase 2': 93.26881003379822}
+2025-08-01 22:21:03,092 - INFO     - [main_workflow_naukri.py:613] - Naukri script execution finished.

@@ -1,0 +1,226 @@
+2025-08-03 15:34:20,529 - INFO     - [main_workflow_naukri.py:449] - =================================================
+2025-08-03 15:34:20,530 - INFO     - [main_workflow_naukri.py:450] - Logging initialized for Naukri. Log file: C:\AI Use and Deveopment\Naukri Job hunting\logs_naukri\log_naukri_20250803_153420_Data_Analyst_Pune.log
+2025-08-03 15:34:20,531 - INFO     - [main_workflow_naukri.py:451] - Starting Job Automation Workflow (Naukri.com)
+2025-08-03 15:34:20,532 - INFO     - [main_workflow_naukri.py:452] - Base Directory: C:\AI Use and Deveopment\Naukri Job hunting
+2025-08-03 15:34:20,532 - INFO     - [main_workflow_naukri.py:453] - Using Excel File: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:34:20,533 - INFO     - [main_workflow_naukri.py:454] - Search Keywords: 'Data Analyst'
+2025-08-03 15:34:20,533 - INFO     - [main_workflow_naukri.py:455] - Base Location: 'Pune'
+2025-08-03 15:34:20,534 - INFO     - [main_workflow_naukri.py:456] - Workflow Phases: 1 to 2
+2025-08-03 15:34:20,534 - INFO     - [main_workflow_naukri.py:457] - =================================================
+2025-08-03 15:34:20,535 - INFO     - [main_workflow_naukri.py:465] - Checking accessibility of Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:34:20,537 - INFO     - [main_workflow_naukri.py:480] - Excel file 'naukri_jobs_master_list.xlsx' is accessible.
+2025-08-03 15:34:20,537 - INFO     - [main_workflow_naukri.py:497] - ########## Starting Naukri Workflow ##########
+2025-08-03 15:34:20,538 - INFO     - [main_workflow_naukri.py:501] - Naukri workflow configured to run from Phase 1 to Phase 2.
+2025-08-03 15:34:20,539 - INFO     - [main_workflow_naukri.py:513] - --- Phase 1: Scrape Job List (Naukri) ---
+2025-08-03 15:34:20,539 - INFO     - [phase1_list_scraper_naukri.py:557] - Initiating Phase 1: Naukri Job List Scraping
+2025-08-03 15:34:20,540 - INFO     - [phase1_list_scraper_naukri.py:74] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-08-03 15:34:21,480 - INFO     - [phase1_list_scraper_naukri.py:87] - Successfully connected to Chrome debugger.
+2025-08-03 15:34:22,013 - INFO     - [phase1_list_scraper_naukri.py:91] - Initial page in connected browser: chrome://new-tab-page/
+2025-08-03 15:34:22,014 - INFO     - [phase1_list_scraper_naukri.py:165] -   Building URL with Keywords: 'Data Analyst' and Location: 'Pune'
+2025-08-03 15:34:22,015 - INFO     - [phase1_list_scraper_naukri.py:206] -   Applying Filter 'Job Freshness: Posting Date, Job Age (e.g., Past 7 days)': Past 24 hours (jobAge=1)
+2025-08-03 15:34:22,015 - INFO     - [phase1_list_scraper_naukri.py:206] -   Applying Filter 'Experience Level: Years of Work Experience': 2 (experience=2)
+2025-08-03 15:34:22,016 - INFO     - [phase1_list_scraper_naukri.py:216] - Constructed Naukri Search URL (Page 1): https://www.naukri.com/data-analyst-jobs-in-pune?jobAge=1&experience=2
+2025-08-03 15:34:22,017 - INFO     - [phase1_list_scraper_naukri.py:366] - Navigating to initial search URL (Page 1): https://www.naukri.com/data-analyst-jobs-in-pune?jobAge=1&experience=2
+2025-08-03 15:34:28,821 - INFO     - [phase1_list_scraper_naukri.py:377] - --- Processing Page 1 ---
+2025-08-03 15:34:34,544 - INFO     - [phase1_list_scraper_naukri.py:400] - Found 20 job card elements on page 1.
+2025-08-03 15:34:48,259 - INFO     - [phase1_list_scraper_naukri.py:435] - Extracted 20 new unique jobs from page 1.
+2025-08-03 15:34:48,260 - INFO     - [phase1_list_scraper_naukri.py:373] - Navigating to Page 2: https://www.naukri.com/data-analyst-jobs-in-pune-2?jobAge=1&experience=2
+2025-08-03 15:34:54,188 - INFO     - [phase1_list_scraper_naukri.py:377] - --- Processing Page 2 ---
+2025-08-03 15:34:59,325 - INFO     - [phase1_list_scraper_naukri.py:400] - Found 20 job card elements on page 2.
+2025-08-03 15:35:13,088 - INFO     - [phase1_list_scraper_naukri.py:435] - Extracted 0 new unique jobs from page 2.
+2025-08-03 15:35:13,089 - INFO     - [phase1_list_scraper_naukri.py:437] - No new unique jobs extracted from page 2. Considering end of useful results.
+2025-08-03 15:35:13,090 - INFO     - [phase1_list_scraper_naukri.py:373] - Navigating to Page 3: https://www.naukri.com/data-analyst-jobs-in-pune-3?jobAge=1&experience=2
+2025-08-03 15:35:20,781 - INFO     - [phase1_list_scraper_naukri.py:377] - --- Processing Page 3 ---
+2025-08-03 15:35:26,460 - INFO     - [phase1_list_scraper_naukri.py:400] - Found 20 job card elements on page 3.
+2025-08-03 15:35:40,114 - INFO     - [phase1_list_scraper_naukri.py:435] - Extracted 0 new unique jobs from page 3.
+2025-08-03 15:35:40,115 - INFO     - [phase1_list_scraper_naukri.py:437] - No new unique jobs extracted from page 3. Considering end of useful results.
+2025-08-03 15:35:40,116 - INFO     - [phase1_list_scraper_naukri.py:373] - Navigating to Page 4: https://www.naukri.com/data-analyst-jobs-in-pune-4?jobAge=1&experience=2
+2025-08-03 15:35:47,072 - INFO     - [phase1_list_scraper_naukri.py:377] - --- Processing Page 4 ---
+2025-08-03 15:35:52,712 - INFO     - [phase1_list_scraper_naukri.py:400] - Found 20 job card elements on page 4.
+2025-08-03 15:36:07,578 - INFO     - [phase1_list_scraper_naukri.py:435] - Extracted 0 new unique jobs from page 4.
+2025-08-03 15:36:07,579 - INFO     - [phase1_list_scraper_naukri.py:437] - No new unique jobs extracted from page 4. Considering end of useful results.
+2025-08-03 15:36:07,579 - INFO     - [phase1_list_scraper_naukri.py:373] - Navigating to Page 5: https://www.naukri.com/data-analyst-jobs-in-pune-5?jobAge=1&experience=2
+2025-08-03 15:36:14,553 - INFO     - [phase1_list_scraper_naukri.py:377] - --- Processing Page 5 ---
+2025-08-03 15:36:20,735 - INFO     - [phase1_list_scraper_naukri.py:400] - Found 20 job card elements on page 5.
+2025-08-03 15:36:34,562 - INFO     - [phase1_list_scraper_naukri.py:435] - Extracted 0 new unique jobs from page 5.
+2025-08-03 15:36:34,563 - INFO     - [phase1_list_scraper_naukri.py:437] - No new unique jobs extracted from page 5. Considering end of useful results.
+2025-08-03 15:36:34,564 - INFO     - [phase1_list_scraper_naukri.py:373] - Navigating to Page 6: https://www.naukri.com/data-analyst-jobs-in-pune-6?jobAge=1&experience=2
+2025-08-03 15:36:40,328 - INFO     - [phase1_list_scraper_naukri.py:377] - --- Processing Page 6 ---
+2025-08-03 15:36:40,329 - INFO     - [phase1_list_scraper_naukri.py:380] - Max pages limit (5) reached.
+2025-08-03 15:36:40,329 - INFO     - [phase1_list_scraper_naukri.py:458] - Finished scraping Naukri. Found 20 new unique jobs in this session.
+2025-08-03 15:36:40,330 - INFO     - [phase1_list_scraper_naukri.py:469] - Processing 20 scraped Naukri jobs for Excel: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:40,961 - INFO     - [phase1_list_scraper_naukri.py:520] - Deduplication: 15 new unique Naukri jobs to add, 5 duplicates skipped.
+2025-08-03 15:36:40,976 - INFO     - [phase1_list_scraper_naukri.py:532] - Saving Naukri DataFrame (205 rows) to Excel...
+2025-08-03 15:36:41,381 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:41,730 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:42,085 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:42,469 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:43,035 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:43,434 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:43,915 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:44,414 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:44,886 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:45,349 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:45,826 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:46,294 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:47,108 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:47,602 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:48,069 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:48,528 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:49,019 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:49,499 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:50,013 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:50,519 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:51,016 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:51,597 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:51,890 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:52,185 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:52,481 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:52,816 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:53,107 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:53,410 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:53,719 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:54,140 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:54,441 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:54,770 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:55,084 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:55,384 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:55,697 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:56,002 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:56,310 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:56,765 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:57,071 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:57,380 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:57,686 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:57,997 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:58,586 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:58,893 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:59,212 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:59,531 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:36:59,969 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:00,278 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:00,588 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:00,901 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:01,214 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:01,530 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:01,862 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:02,181 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:02,617 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:02,934 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:03,259 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:03,589 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:03,932 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:04,257 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:04,585 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:04,919 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:05,376 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:05,722 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:06,077 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:06,423 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:06,754 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:07,090 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:07,422 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:07,755 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:08,085 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:08,573 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:08,912 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:09,259 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:09,602 - INFO     - [phase1_list_scraper_naukri.py:541] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-03 15:37:09,602 - INFO     - [phase1_list_scraper_naukri.py:543] - No changes or new unique jobs, Naukri Excel file not saved in this batch.
+2025-08-03 15:37:09,604 - INFO     - [phase1_list_scraper_naukri.py:595] - Phase 1 (Naukri) Summary: Added 15 unique jobs to Excel. Skipped 5 duplicates.
+2025-08-03 15:37:09,605 - INFO     - [phase1_list_scraper_naukri.py:596] - Phase 1 (Naukri) completed.
+2025-08-03 15:37:09,605 - INFO     - [main_workflow_naukri.py:518] - --- Phase 1 (Naukri) Completed (Added: 15, Skipped Duplicates: 5) ---
+2025-08-03 15:37:09,606 - INFO     - [main_workflow_naukri.py:521] - Phase 1 (Naukri) duration: 169.07s.
+2025-08-03 15:37:09,607 - INFO     - [main_workflow_naukri.py:527] - --- Phase 2: Scrape Job Details (Naukri) ---
+2025-08-03 15:37:09,607 - INFO     - [phase2_detail_scraper_naukri.py:254] - Initiating Phase 2: Naukri Job Detail Scraping
+2025-08-03 15:37:09,608 - INFO     - [phase1_list_scraper_naukri.py:74] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-08-03 15:37:10,512 - INFO     - [phase1_list_scraper_naukri.py:87] - Successfully connected to Chrome debugger.
+2025-08-03 15:37:11,026 - INFO     - [phase1_list_scraper_naukri.py:91] - Initial page in connected browser: https://www.naukri.com/data-analyst-jobs-in-pune?jobAge=1&experience=2
+2025-08-03 15:37:11,026 - INFO     - [phase2_detail_scraper_naukri.py:161] - Starting detailed scraping. Overwrite Phase 1 data: False
+2025-08-03 15:37:11,446 - INFO     - [phase2_detail_scraper_naukri.py:195] - Found 15 rows to process with status in ['New', 'Error - Scrape Job Details'].
+2025-08-03 15:37:11,446 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 192/206 | Job: 'DATA ENTRY Operator ( MFG CO ) KHED Shivapur ,PUNE.' ---
+2025-08-03 15:39:01,724 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 15:39:01,724 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 193/206 | Job: 'Work From Home | Data Entry' ---
+2025-08-03 15:40:50,970 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 15:40:50,971 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 194/206 | Job: 'KST Associate' ---
+2025-08-03 15:42:41,545 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 15:42:41,547 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 195/206 | Job: 'Jr. QA Engineer' ---
+2025-08-03 15:44:31,985 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 15:44:31,986 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 196/206 | Job: 'Software Engineer (Dot net, Angular)' ---
+2025-08-03 15:46:22,452 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 15:46:22,453 - INFO     - [phase2_detail_scraper_naukri.py:229] - Saving progress to Excel after 5 rows...
+2025-08-03 15:46:22,920 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 197/206 | Job: 'Software Engineer' ---
+2025-08-03 15:48:14,314 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 15:48:14,315 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 198/206 | Job: 'Dotnet Developer' ---
+2025-08-03 15:50:04,774 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 15:50:04,775 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 199/206 | Job: 'Full Stack Engineer' ---
+2025-08-03 15:51:56,096 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 15:51:56,097 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 200/206 | Job: 'Java Full Stack Developer' ---
+2025-08-03 15:53:47,258 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 15:53:47,259 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 201/206 | Job: 'Full Stack Engineer' ---
+2025-08-03 15:55:37,969 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 15:55:37,970 - INFO     - [phase2_detail_scraper_naukri.py:229] - Saving progress to Excel after 10 rows...
+2025-08-03 15:55:38,423 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 202/206 | Job: 'Software Engineer, Development' ---
+2025-08-03 15:57:28,385 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 15:57:28,386 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 203/206 | Job: 'Network Operation Engineer' ---
+2025-08-03 15:59:17,944 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 15:59:17,945 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 204/206 | Job: 'Quality Control & Quality Assurance Engineer' ---
+2025-08-03 16:01:08,121 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 16:01:08,122 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 205/206 | Job: 'Automation Test Engineer' ---
+2025-08-03 16:02:58,765 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 16:02:58,766 - INFO     - [phase2_detail_scraper_naukri.py:207] - --- Processing Row 206/206 | Job: 'IOS/Senior Software Engineer' ---
+2025-08-03 16:04:49,504 - INFO     - [phase2_detail_scraper_naukri.py:221] -   Successfully processed. Status -> Ready for AI
+2025-08-03 16:04:49,505 - INFO     - [phase2_detail_scraper_naukri.py:229] - Saving progress to Excel after 15 rows...
+2025-08-03 16:04:49,571 - CRITICAL - [phase2_detail_scraper_naukri.py:248] - Critical error in Phase 2 processing: [Errno 13] Permission denied: 'C:\\AI Use and Deveopment\\Naukri Job hunting\\naukri_jobs_master_list.xlsx'
+Traceback (most recent call last):
+  File "c:\AI Use and Deveopment\Naukri Job hunting\phase2_detail_scraper_naukri.py", line 235, in process_excel_for_details
+    logging.error(f"Major scraping error on page {job_url}: {type(e).__name__}", exc_info=False)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Python313\Lib\site-packages\pandas\core\generic.py", line 2417, in to_excel
+    formatter.write(
+    ~~~~~~~~~~~~~~~^
+        excel_writer,
+        ^^^^^^^^^^^^^
+    ...<6 lines>...
+        engine_kwargs=engine_kwargs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python313\Lib\site-packages\pandas\io\formats\excel.py", line 943, in write
+    writer = ExcelWriter(
+        writer,
+    ...<2 lines>...
+        engine_kwargs=engine_kwargs,
+    )
+  File "C:\Python313\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 61, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        path,
+        ^^^^^
+    ...<3 lines>...
+        engine_kwargs=engine_kwargs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python313\Lib\site-packages\pandas\io\excel\_base.py", line 1246, in __init__
+    self._handles = get_handle(
+                    ~~~~~~~~~~^
+        path, mode, storage_options=storage_options, is_text=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python313\Lib\site-packages\pandas\io\common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+PermissionError: [Errno 13] Permission denied: 'C:\\AI Use and Deveopment\\Naukri Job hunting\\naukri_jobs_master_list.xlsx'
+2025-08-03 16:04:49,619 - INFO     - [phase2_detail_scraper_naukri.py:271] - Phase 2 run finished.
+2025-08-03 16:04:49,619 - WARNING  - [main_workflow_naukri.py:530] - Phase 2 (Naukri) encountered critical errors.
+2025-08-03 16:04:49,620 - INFO     - [main_workflow_naukri.py:534] - Phase 2 (Naukri) duration: 1660.01s.
+2025-08-03 16:04:49,620 - INFO     - [main_workflow_naukri.py:589] - #################################################
+2025-08-03 16:04:49,621 - INFO     - [main_workflow_naukri.py:590] - Naukri Workflow Completed (Phases 1-2).
+2025-08-03 16:04:49,622 - INFO     - [main_workflow_naukri.py:592] - Review log file for detailed information.
+2025-08-03 16:04:49,622 - INFO     - [main_workflow_naukri.py:593] - #################################################
+2025-08-03 16:04:49,623 - INFO     - [main_workflow_naukri.py:623] - Total Naukri Workflow Runtime: 1829.10 seconds.
+2025-08-03 16:04:49,623 - INFO     - [main_workflow_naukri.py:624] - Phase Durations (seconds): {'Phase 1': 169.06731748580933, 'Phase 2': 1660.0130784511566}
+2025-08-03 16:04:49,623 - INFO     - [main_workflow_naukri.py:625] - Naukri script execution finished.

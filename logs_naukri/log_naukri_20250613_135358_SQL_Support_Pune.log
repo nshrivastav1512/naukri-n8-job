@@ -1,0 +1,43 @@
+2025-06-13 13:53:58,542 - INFO     - [main_workflow_naukri.py:433] - =================================================
+2025-06-13 13:53:58,542 - INFO     - [main_workflow_naukri.py:434] - Logging initialized for Naukri. Log file: C:\AI Use and Deveopment\Naukri Job hunting\logs_naukri\log_naukri_20250613_135358_SQL_Support_Pune.log
+2025-06-13 13:53:58,542 - INFO     - [main_workflow_naukri.py:435] - Starting Job Automation Workflow (Naukri.com)
+2025-06-13 13:53:58,543 - INFO     - [main_workflow_naukri.py:436] - Base Directory: C:\AI Use and Deveopment\Naukri Job hunting
+2025-06-13 13:53:58,543 - INFO     - [main_workflow_naukri.py:437] - Using Excel File: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-06-13 13:53:58,543 - INFO     - [main_workflow_naukri.py:438] - Search Keywords: 'SQL Support, SQL Developer'
+2025-06-13 13:53:58,544 - INFO     - [main_workflow_naukri.py:439] - Base Location: 'Pune'
+2025-06-13 13:53:58,544 - INFO     - [main_workflow_naukri.py:440] - Workflow Phases: 2 to 2
+2025-06-13 13:53:58,544 - INFO     - [main_workflow_naukri.py:441] - =================================================
+2025-06-13 13:53:58,544 - INFO     - [main_workflow_naukri.py:449] - Checking accessibility of Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-06-13 13:53:58,545 - INFO     - [main_workflow_naukri.py:464] - Excel file 'naukri_jobs_master_list.xlsx' is accessible.
+2025-06-13 13:53:58,545 - INFO     - [main_workflow_naukri.py:481] - ########## Starting Naukri Workflow ##########
+2025-06-13 13:53:58,545 - INFO     - [main_workflow_naukri.py:485] - Naukri workflow configured to run from Phase 2 to Phase 2.
+2025-06-13 13:53:58,546 - INFO     - [main_workflow_naukri.py:506] - --- Skipping Phase 1 (Naukri) (Config) ---
+2025-06-13 13:53:58,546 - INFO     - [main_workflow_naukri.py:511] - --- Phase 2: Scrape Job Details (Naukri) ---
+2025-06-13 13:53:58,546 - INFO     - [phase2_detail_scraper_naukri.py:256] - Initiating Phase 2: Naukri Job Detail Scraping
+2025-06-13 13:53:58,546 - INFO     - [phase1_list_scraper_naukri.py:59] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-06-13 13:53:59,452 - INFO     - [phase1_list_scraper_naukri.py:72] - Successfully connected to Chrome debugger.
+2025-06-13 13:53:59,963 - INFO     - [phase1_list_scraper_naukri.py:76] - Initial page in connected browser: devtools://devtools/bundled/devtools_app.html?remoteBase=https://chrome-devtools-frontend.appspot.com/serve_file/@dd98cd04c723035396b6d301e1f196b29a14a0ff/&targetType=tab&can_dock=true&panel=elements
+2025-06-13 13:53:59,963 - INFO     - [phase2_detail_scraper_naukri.py:193] - Starting detailed scraping. Overwrite Phase 1 data: False
+2025-06-13 13:54:00,133 - INFO     - [phase2_detail_scraper_naukri.py:209] - Found 80 rows to process with status in ['New', 'Error - Scrape Job Details'].
+2025-06-13 13:54:00,134 - INFO     - [phase2_detail_scraper_naukri.py:220] - --- Processing Row 2/81 | Job: 'Urgent Hiring For Business Analyst Python SQL Developer' ---
+2025-06-13 13:54:03,951 - CRITICAL - [phase2_detail_scraper_naukri.py:250] - Critical error in Phase 2 processing: 'details_job_title'
+Traceback (most recent call last):
+  File "c:\AI Use and Deveopment\Naukri Job hunting\phase2_detail_scraper_naukri.py", line 223, in process_excel_for_details
+    scraped_details = scrape_naukri_job_details(driver, job_link, config)
+  File "c:\AI Use and Deveopment\Naukri Job hunting\phase2_detail_scraper_naukri.py", line 88, in scrape_naukri_job_details
+    details['Job Title'] = extract_text('details_job_title')
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "c:\AI Use and Deveopment\Naukri Job hunting\phase2_detail_scraper_naukri.py", line 72, in extract_text
+    return safe_get_text(main_container.find_element(By.CSS_SELECTOR, selectors[selector_key]))
+                                                                      ~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'details_job_title'
+2025-06-13 13:54:03,953 - INFO     - [phase2_detail_scraper_naukri.py:273] - Phase 2 run finished.
+2025-06-13 13:54:03,954 - WARNING  - [main_workflow_naukri.py:514] - Phase 2 (Naukri) encountered critical errors.
+2025-06-13 13:54:03,954 - INFO     - [main_workflow_naukri.py:518] - Phase 2 (Naukri) duration: 5.41s.
+2025-06-13 13:54:03,954 - INFO     - [main_workflow_naukri.py:573] - #################################################
+2025-06-13 13:54:03,954 - INFO     - [main_workflow_naukri.py:574] - Naukri Workflow Completed (Phases 2-2).
+2025-06-13 13:54:03,955 - INFO     - [main_workflow_naukri.py:576] - Review log file for detailed information.
+2025-06-13 13:54:03,955 - INFO     - [main_workflow_naukri.py:577] - #################################################
+2025-06-13 13:54:03,955 - INFO     - [main_workflow_naukri.py:607] - Total Naukri Workflow Runtime: 5.41 seconds.
+2025-06-13 13:54:03,956 - INFO     - [main_workflow_naukri.py:608] - Phase Durations (seconds): {'Phase 2': 5.408061742782593}
+2025-06-13 13:54:03,956 - INFO     - [main_workflow_naukri.py:609] - Naukri script execution finished.

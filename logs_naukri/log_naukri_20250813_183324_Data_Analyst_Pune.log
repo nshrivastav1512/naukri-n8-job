@@ -1,0 +1,110 @@
+2025-08-13 18:33:24,962 - INFO     - [main_workflow_naukri.py:444] - =================================================
+2025-08-13 18:33:24,962 - INFO     - [main_workflow_naukri.py:445] - Logging initialized for Naukri. Log file: C:\AI Use and Deveopment\Naukri Job hunting v1\logs_naukri\log_naukri_20250813_183324_Data_Analyst_Pune.log
+2025-08-13 18:33:24,963 - INFO     - [main_workflow_naukri.py:446] - Starting Job Automation Workflow (Naukri.com)
+2025-08-13 18:33:24,963 - INFO     - [main_workflow_naukri.py:447] - Base Directory: C:\AI Use and Deveopment\Naukri Job hunting v1
+2025-08-13 18:33:24,963 - INFO     - [main_workflow_naukri.py:448] - Using Excel File: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-13 18:33:24,963 - INFO     - [main_workflow_naukri.py:449] - Search Keywords: 'Data Analyst'
+2025-08-13 18:33:24,963 - INFO     - [main_workflow_naukri.py:450] - Base Location: 'Pune'
+2025-08-13 18:33:24,963 - INFO     - [main_workflow_naukri.py:451] - Workflow Phases: 1 to 2
+2025-08-13 18:33:24,963 - INFO     - [main_workflow_naukri.py:452] - =================================================
+2025-08-13 18:33:24,964 - INFO     - [main_workflow_naukri.py:460] - Checking accessibility of Excel file: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-13 18:33:24,964 - INFO     - [main_workflow_naukri.py:475] - Excel file 'naukri_jobs_master_list.xlsx' is accessible.
+2025-08-13 18:33:24,964 - INFO     - [main_workflow_naukri.py:492] - ########## Starting Naukri Workflow ##########
+2025-08-13 18:33:24,964 - INFO     - [main_workflow_naukri.py:496] - Naukri workflow configured to run from Phase 1 to Phase 2.
+2025-08-13 18:33:24,964 - INFO     - [main_workflow_naukri.py:508] - --- Phase 1: Scrape Job List (Naukri) ---
+2025-08-13 18:33:24,964 - INFO     - [phase1_list_scraper_naukri.py:562] - Initiating Phase 1: Naukri Job List Scraping
+2025-08-13 18:33:24,964 - INFO     - [phase1_list_scraper_naukri.py:572] - Reading existing Excel file to build duplicate check list: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-13 18:33:25,073 - INFO     - [phase1_list_scraper_naukri.py:577] - Found 120 existing job URLs in the master file.
+2025-08-13 18:33:25,074 - INFO     - [phase1_list_scraper_naukri.py:69] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-08-13 18:33:27,936 - ERROR    - [phase1_list_scraper_naukri.py:94] - WebDriverException connecting (Attempt 1/3): Message: session not created: cannot connect to chrome at localhost:9222
+from session not created: This version of ChromeDriver only supports Chrome version 137
+Current browser version is 139.0.7258.67
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6f93dfea5+79173]
+	GetHandleVerifier [0x0x7ff6f93dff00+79264]
+	(No symbol) [0x0x7ff6f9199e5a]
+	(No symbol) [0x0x7ff6f91de26f]
+	(No symbol) [0x0x7ff6f91dd2bb]
+	(No symbol) [0x0x7ff6f91d222e]
+	(No symbol) [0x0x7ff6f92267de]
+	(No symbol) [0x0x7ff6f9225f70]
+	(No symbol) [0x0x7ff6f9218743]
+	(No symbol) [0x0x7ff6f91e14c1]
+	(No symbol) [0x0x7ff6f91e2253]
+	GetHandleVerifier [0x0x7ff6f96aa2dd+3004797]
+	GetHandleVerifier [0x0x7ff6f96a472d+2981325]
+	GetHandleVerifier [0x0x7ff6f96c3380+3107360]
+	GetHandleVerifier [0x0x7ff6f93faa2e+188622]
+	GetHandleVerifier [0x0x7ff6f94022bf+219487]
+	GetHandleVerifier [0x0x7ff6f93e8df4+115860]
+	GetHandleVerifier [0x0x7ff6f93e8fa9+116297]
+	GetHandleVerifier [0x0x7ff6f93cf558+11256]
+	BaseThreadInitThunk [0x0x7fffe0f6e8d7+23]
+	RtlUserThreadStart [0x0x7fffe291c34c+44]
+
+2025-08-13 18:33:27,936 - INFO     - [phase1_list_scraper_naukri.py:98] - Retrying connection in 10 seconds...
+2025-08-13 18:33:40,812 - ERROR    - [phase1_list_scraper_naukri.py:94] - WebDriverException connecting (Attempt 2/3): Message: session not created: cannot connect to chrome at localhost:9222
+from session not created: This version of ChromeDriver only supports Chrome version 137
+Current browser version is 139.0.7258.67
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6f93dfea5+79173]
+	GetHandleVerifier [0x0x7ff6f93dff00+79264]
+	(No symbol) [0x0x7ff6f9199e5a]
+	(No symbol) [0x0x7ff6f91de26f]
+	(No symbol) [0x0x7ff6f91dd2bb]
+	(No symbol) [0x0x7ff6f91d222e]
+	(No symbol) [0x0x7ff6f92267de]
+	(No symbol) [0x0x7ff6f9225f70]
+	(No symbol) [0x0x7ff6f9218743]
+	(No symbol) [0x0x7ff6f91e14c1]
+	(No symbol) [0x0x7ff6f91e2253]
+	GetHandleVerifier [0x0x7ff6f96aa2dd+3004797]
+	GetHandleVerifier [0x0x7ff6f96a472d+2981325]
+	GetHandleVerifier [0x0x7ff6f96c3380+3107360]
+	GetHandleVerifier [0x0x7ff6f93faa2e+188622]
+	GetHandleVerifier [0x0x7ff6f94022bf+219487]
+	GetHandleVerifier [0x0x7ff6f93e8df4+115860]
+	GetHandleVerifier [0x0x7ff6f93e8fa9+116297]
+	GetHandleVerifier [0x0x7ff6f93cf558+11256]
+	BaseThreadInitThunk [0x0x7fffe0f6e8d7+23]
+	RtlUserThreadStart [0x0x7fffe291c34c+44]
+
+2025-08-13 18:33:40,813 - INFO     - [phase1_list_scraper_naukri.py:98] - Retrying connection in 20 seconds...
+2025-08-13 18:34:03,700 - ERROR    - [phase1_list_scraper_naukri.py:94] - WebDriverException connecting (Attempt 3/3): Message: session not created: cannot connect to chrome at localhost:9222
+from session not created: This version of ChromeDriver only supports Chrome version 137
+Current browser version is 139.0.7258.67
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6f93dfea5+79173]
+	GetHandleVerifier [0x0x7ff6f93dff00+79264]
+	(No symbol) [0x0x7ff6f9199e5a]
+	(No symbol) [0x0x7ff6f91de26f]
+	(No symbol) [0x0x7ff6f91dd2bb]
+	(No symbol) [0x0x7ff6f91d222e]
+	(No symbol) [0x0x7ff6f92267de]
+	(No symbol) [0x0x7ff6f9225f70]
+	(No symbol) [0x0x7ff6f9218743]
+	(No symbol) [0x0x7ff6f91e14c1]
+	(No symbol) [0x0x7ff6f91e2253]
+	GetHandleVerifier [0x0x7ff6f96aa2dd+3004797]
+	GetHandleVerifier [0x0x7ff6f96a472d+2981325]
+	GetHandleVerifier [0x0x7ff6f96c3380+3107360]
+	GetHandleVerifier [0x0x7ff6f93faa2e+188622]
+	GetHandleVerifier [0x0x7ff6f94022bf+219487]
+	GetHandleVerifier [0x0x7ff6f93e8df4+115860]
+	GetHandleVerifier [0x0x7ff6f93e8fa9+116297]
+	GetHandleVerifier [0x0x7ff6f93cf558+11256]
+	BaseThreadInitThunk [0x0x7fffe0f6e8d7+23]
+	RtlUserThreadStart [0x0x7fffe291c34c+44]
+
+2025-08-13 18:34:03,700 - ERROR    - [phase1_list_scraper_naukri.py:96] - Max retries reached. Ensure Chrome started with debugging on correct port & other instances closed.
+2025-08-13 18:34:03,701 - CRITICAL - [phase1_list_scraper_naukri.py:584] - Failed to setup Selenium WebDriver for Naukri. Phase 1 cannot proceed.
+2025-08-13 18:34:03,701 - ERROR    - [main_workflow_naukri.py:512] - Phase 1 (Naukri) failed critically. Aborting.
+2025-08-13 18:34:03,701 - INFO     - [main_workflow_naukri.py:516] - Phase 1 (Naukri) duration: 38.74s.
+2025-08-13 18:34:03,701 - WARNING  - [main_workflow_naukri.py:530] - --- Skipping Phase 2 (Naukri) due to prior failure ---
+2025-08-13 18:34:03,701 - INFO     - [main_workflow_naukri.py:584] - #################################################
+2025-08-13 18:34:03,701 - ERROR    - [main_workflow_naukri.py:586] - Naukri Workflow Halted or Completed with CRITICAL ERRORS.
+2025-08-13 18:34:03,701 - INFO     - [main_workflow_naukri.py:587] - Review log file for detailed information.
+2025-08-13 18:34:03,701 - INFO     - [main_workflow_naukri.py:588] - #################################################
+2025-08-13 18:34:03,701 - INFO     - [main_workflow_naukri.py:618] - Total Naukri Workflow Runtime: 38.74 seconds.
+2025-08-13 18:34:03,701 - INFO     - [main_workflow_naukri.py:619] - Phase Durations (seconds): {'Phase 1': 38.73687744140625}
+2025-08-13 18:34:03,702 - INFO     - [main_workflow_naukri.py:620] - Naukri script execution finished.

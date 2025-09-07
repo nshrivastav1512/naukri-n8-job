@@ -1,0 +1,12 @@
+2025-08-04 01:47:40,575 - INFO     - [main_workflow_naukri.py:444] - =================================================
+2025-08-04 01:47:40,576 - INFO     - [main_workflow_naukri.py:445] - Logging initialized for Naukri. Log file: C:\AI Use and Deveopment\Naukri Job hunting v1\logs_naukri\log_naukri_20250804_014740_Data_Analyst_Pune.log
+2025-08-04 01:47:40,578 - INFO     - [main_workflow_naukri.py:446] - Starting Job Automation Workflow (Naukri.com)
+2025-08-04 01:47:40,578 - INFO     - [main_workflow_naukri.py:447] - Base Directory: C:\AI Use and Deveopment\Naukri Job hunting v1
+2025-08-04 01:47:40,579 - INFO     - [main_workflow_naukri.py:448] - Using Excel File: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-04 01:47:40,580 - INFO     - [main_workflow_naukri.py:449] - Search Keywords: 'Data Analyst'
+2025-08-04 01:47:40,580 - INFO     - [main_workflow_naukri.py:450] - Base Location: 'Pune'
+2025-08-04 01:47:40,581 - INFO     - [main_workflow_naukri.py:451] - Workflow Phases: 1 to 2
+2025-08-04 01:47:40,581 - INFO     - [main_workflow_naukri.py:452] - =================================================
+2025-08-04 01:47:40,582 - INFO     - [main_workflow_naukri.py:460] - Checking accessibility of Excel file: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-04 01:47:40,583 - ERROR    - [main_workflow_naukri.py:478] - PERMISSION ERROR: Cannot access Excel file: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-04 01:47:40,584 - ERROR    - [main_workflow_naukri.py:479] - The file might be open in Excel or another application.

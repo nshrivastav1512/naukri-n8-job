@@ -1,0 +1,43 @@
+2025-08-04 01:48:12,237 - INFO     - [main_workflow_naukri.py:444] - =================================================
+2025-08-04 01:48:12,238 - INFO     - [main_workflow_naukri.py:445] - Logging initialized for Naukri. Log file: C:\AI Use and Deveopment\Naukri Job hunting v1\logs_naukri\log_naukri_20250804_014812_Data_Analyst_Pune.log
+2025-08-04 01:48:12,238 - INFO     - [main_workflow_naukri.py:446] - Starting Job Automation Workflow (Naukri.com)
+2025-08-04 01:48:12,239 - INFO     - [main_workflow_naukri.py:447] - Base Directory: C:\AI Use and Deveopment\Naukri Job hunting v1
+2025-08-04 01:48:12,240 - INFO     - [main_workflow_naukri.py:448] - Using Excel File: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-04 01:48:12,241 - INFO     - [main_workflow_naukri.py:449] - Search Keywords: 'Data Analyst'
+2025-08-04 01:48:12,241 - INFO     - [main_workflow_naukri.py:450] - Base Location: 'Pune'
+2025-08-04 01:48:12,242 - INFO     - [main_workflow_naukri.py:451] - Workflow Phases: 1 to 1
+2025-08-04 01:48:12,243 - INFO     - [main_workflow_naukri.py:452] - =================================================
+2025-08-04 01:48:12,243 - INFO     - [main_workflow_naukri.py:460] - Checking accessibility of Excel file: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-04 01:48:12,244 - INFO     - [main_workflow_naukri.py:475] - Excel file 'naukri_jobs_master_list.xlsx' is accessible.
+2025-08-04 01:48:12,245 - INFO     - [main_workflow_naukri.py:492] - ########## Starting Naukri Workflow ##########
+2025-08-04 01:48:12,245 - INFO     - [main_workflow_naukri.py:496] - Naukri workflow configured to run from Phase 1 to Phase 1.
+2025-08-04 01:48:12,246 - INFO     - [main_workflow_naukri.py:508] - --- Phase 1: Scrape Job List (Naukri) ---
+2025-08-04 01:48:12,247 - INFO     - [phase1_list_scraper_naukri.py:563] - Initiating Phase 1: Naukri Job List Scraping
+2025-08-04 01:48:12,247 - INFO     - [phase1_list_scraper_naukri.py:69] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-08-04 01:48:13,243 - INFO     - [phase1_list_scraper_naukri.py:82] - Successfully connected to Chrome debugger.
+2025-08-04 01:48:13,802 - INFO     - [phase1_list_scraper_naukri.py:86] - Initial page in connected browser: https://www.naukri.com/job-listings-financial-markets-level-1-service-desk-support-analyst-transaction-network-services-inc-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-2-years-010825501934
+2025-08-04 01:48:13,803 - INFO     - [phase1_list_scraper_naukri.py:160] -   Building URL with Keywords: 'Data Analyst' and Location: 'Pune'
+2025-08-04 01:48:13,804 - INFO     - [phase1_list_scraper_naukri.py:201] -   Applying Filter 'Job Freshness: Posting Date, Job Age (e.g., Past 7 days)': Past 3 days (jobAge=3)
+2025-08-04 01:48:13,805 - INFO     - [phase1_list_scraper_naukri.py:201] -   Applying Filter 'Experience Level: Years of Work Experience': 2 (experience=2)
+2025-08-04 01:48:13,806 - INFO     - [phase1_list_scraper_naukri.py:211] - Constructed Naukri Search URL (Page 1): https://www.naukri.com/data-analyst-jobs-in-pune?jobAge=3&experience=2
+2025-08-04 01:48:13,806 - INFO     - [phase1_list_scraper_naukri.py:361] - Navigating to initial search URL (Page 1): https://www.naukri.com/data-analyst-jobs-in-pune?jobAge=3&experience=2
+2025-08-04 01:48:21,876 - INFO     - [phase1_list_scraper_naukri.py:372] - --- Processing Page 1 ---
+2025-08-04 01:48:27,515 - INFO     - [phase1_list_scraper_naukri.py:395] - Found 20 job card elements on page 1.
+2025-08-04 01:48:41,184 - INFO     - [phase1_list_scraper_naukri.py:430] - Extracted 20 new unique jobs from page 1.
+2025-08-04 01:48:41,185 - INFO     - [phase1_list_scraper_naukri.py:438] - Minimum unique jobs target (10) met. Stopping pagination.
+2025-08-04 01:48:41,186 - INFO     - [phase1_list_scraper_naukri.py:453] - Finished scraping Naukri. Found 20 new unique jobs in this session.
+2025-08-04 01:48:41,186 - INFO     - [phase1_list_scraper_naukri.py:464] - Processing 20 scraped Naukri jobs for Excel: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-04 01:48:41,609 - INFO     - [phase1_list_scraper_naukri.py:523] - Deduplication: 20 new unique Naukri jobs to add, 0 duplicates skipped.
+2025-08-04 01:48:41,618 - INFO     - [phase1_list_scraper_naukri.py:536] - Saving Naukri DataFrame (70 rows) to Excel...
+2025-08-04 01:48:41,750 - INFO     - [phase1_list_scraper_naukri.py:547] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting v1\naukri_jobs_master_list.xlsx
+2025-08-04 01:48:41,751 - INFO     - [phase1_list_scraper_naukri.py:601] - Phase 1 (Naukri) Summary: Added 20 unique jobs to Excel. Skipped 0 duplicates.
+2025-08-04 01:48:41,752 - INFO     - [phase1_list_scraper_naukri.py:602] - Phase 1 (Naukri) completed.
+2025-08-04 01:48:41,752 - INFO     - [main_workflow_naukri.py:513] - --- Phase 1 (Naukri) Completed (Added: 20, Skipped Duplicates: 0) ---
+2025-08-04 01:48:41,753 - INFO     - [main_workflow_naukri.py:516] - Phase 1 (Naukri) duration: 29.51s.
+2025-08-04 01:48:41,754 - INFO     - [main_workflow_naukri.py:584] - #################################################
+2025-08-04 01:48:41,754 - INFO     - [main_workflow_naukri.py:585] - Naukri Workflow Completed (Phases 1-1).
+2025-08-04 01:48:41,755 - INFO     - [main_workflow_naukri.py:587] - Review log file for detailed information.
+2025-08-04 01:48:41,756 - INFO     - [main_workflow_naukri.py:588] - #################################################
+2025-08-04 01:48:41,756 - INFO     - [main_workflow_naukri.py:618] - Total Naukri Workflow Runtime: 29.52 seconds.
+2025-08-04 01:48:41,757 - INFO     - [main_workflow_naukri.py:619] - Phase Durations (seconds): {'Phase 1': 29.507071495056152}
+2025-08-04 01:48:41,758 - INFO     - [main_workflow_naukri.py:620] - Naukri script execution finished.

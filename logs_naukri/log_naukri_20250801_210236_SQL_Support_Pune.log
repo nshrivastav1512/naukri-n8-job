@@ -1,0 +1,341 @@
+2025-08-01 21:02:36,239 - INFO     - [main_workflow_naukri.py:437] - =================================================
+2025-08-01 21:02:36,240 - INFO     - [main_workflow_naukri.py:438] - Logging initialized for Naukri. Log file: C:\AI Use and Deveopment\Naukri Job hunting\logs_naukri\log_naukri_20250801_210236_SQL_Support_Pune.log
+2025-08-01 21:02:36,240 - INFO     - [main_workflow_naukri.py:439] - Starting Job Automation Workflow (Naukri.com)
+2025-08-01 21:02:36,241 - INFO     - [main_workflow_naukri.py:440] - Base Directory: C:\AI Use and Deveopment\Naukri Job hunting
+2025-08-01 21:02:36,242 - INFO     - [main_workflow_naukri.py:441] - Using Excel File: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-01 21:02:36,243 - INFO     - [main_workflow_naukri.py:442] - Search Keywords: 'SQL Support, SQL Developer'
+2025-08-01 21:02:36,243 - INFO     - [main_workflow_naukri.py:443] - Base Location: 'Pune'
+2025-08-01 21:02:36,244 - INFO     - [main_workflow_naukri.py:444] - Workflow Phases: 1 to 2
+2025-08-01 21:02:36,245 - INFO     - [main_workflow_naukri.py:445] - =================================================
+2025-08-01 21:02:36,245 - INFO     - [main_workflow_naukri.py:453] - Checking accessibility of Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-01 21:02:36,246 - ERROR    - [main_workflow_naukri.py:471] - PERMISSION ERROR: Cannot access Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-01 21:02:36,247 - ERROR    - [main_workflow_naukri.py:472] - The file might be open in Excel or another application.
+2025-08-01 21:02:52,146 - INFO     - [main_workflow_naukri.py:475] - Retrying file access in 5 seconds...
+2025-08-01 21:02:57,149 - INFO     - [main_workflow_naukri.py:468] - Excel file 'naukri_jobs_master_list.xlsx' is accessible.
+2025-08-01 21:02:57,150 - INFO     - [main_workflow_naukri.py:485] - ########## Starting Naukri Workflow ##########
+2025-08-01 21:02:57,151 - INFO     - [main_workflow_naukri.py:489] - Naukri workflow configured to run from Phase 1 to Phase 2.
+2025-08-01 21:02:57,152 - INFO     - [main_workflow_naukri.py:501] - --- Phase 1: Scrape Job List (Naukri) ---
+2025-08-01 21:02:57,153 - INFO     - [phase1_list_scraper_naukri.py:536] - Initiating Phase 1: Naukri Job List Scraping
+2025-08-01 21:02:57,153 - INFO     - [phase1_list_scraper_naukri.py:59] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-08-01 21:02:58,105 - INFO     - [phase1_list_scraper_naukri.py:72] - Successfully connected to Chrome debugger.
+2025-08-01 21:02:58,665 - INFO     - [phase1_list_scraper_naukri.py:76] - Initial page in connected browser: https://www.naukri.com/software-engineer-jobs-in-pune?expJD=true
+2025-08-01 21:02:58,666 - INFO     - [phase1_list_scraper_naukri.py:150] -   Building URL with Keywords: 'SQL Support, SQL Developer' and Location: 'Pune'
+2025-08-01 21:02:58,666 - INFO     - [phase1_list_scraper_naukri.py:191] -   Applying Filter 'Job Freshness: Posting Date, Job Age (e.g., Past 7 days)': Past 24 hours (jobAge=1)
+2025-08-01 21:02:58,667 - INFO     - [phase1_list_scraper_naukri.py:191] -   Applying Filter 'Experience Level: Years of Work Experience': 2 (experience=2)
+2025-08-01 21:02:58,668 - INFO     - [phase1_list_scraper_naukri.py:201] - Constructed Naukri Search URL (Page 1): https://www.naukri.com/sql-support-sql-developer-jobs-in-pune?jobAge=1&experience=2
+2025-08-01 21:02:58,669 - INFO     - [phase1_list_scraper_naukri.py:351] - Navigating to initial search URL (Page 1): https://www.naukri.com/sql-support-sql-developer-jobs-in-pune?jobAge=1&experience=2
+2025-08-01 21:03:05,337 - INFO     - [phase1_list_scraper_naukri.py:362] - --- Processing Page 1 ---
+2025-08-01 21:03:10,769 - INFO     - [phase1_list_scraper_naukri.py:385] - Found 20 job card elements on page 1.
+2025-08-01 21:03:27,033 - INFO     - [phase1_list_scraper_naukri.py:420] - Extracted 20 new unique jobs from page 1.
+2025-08-01 21:03:27,034 - INFO     - [phase1_list_scraper_naukri.py:358] - Navigating to Page 2: https://www.naukri.com/sql-support-sql-developer-jobs-in-pune-2?jobAge=1&experience=2
+2025-08-01 21:03:34,019 - INFO     - [phase1_list_scraper_naukri.py:362] - --- Processing Page 2 ---
+2025-08-01 21:03:40,923 - INFO     - [phase1_list_scraper_naukri.py:385] - Found 20 job card elements on page 2.
+2025-08-01 21:03:53,657 - INFO     - [phase1_list_scraper_naukri.py:420] - Extracted 20 new unique jobs from page 2.
+2025-08-01 21:03:53,657 - INFO     - [phase1_list_scraper_naukri.py:428] - Minimum unique jobs target (30) met. Stopping pagination.
+2025-08-01 21:03:53,658 - INFO     - [phase1_list_scraper_naukri.py:443] - Finished scraping Naukri. Found 40 new unique jobs in this session.
+2025-08-01 21:03:53,659 - INFO     - [phase1_list_scraper_naukri.py:454] - Processing 40 scraped Naukri jobs for Excel: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-01 21:03:54,035 - INFO     - [phase1_list_scraper_naukri.py:505] - Deduplication: 40 new unique Naukri jobs to add, 0 duplicates skipped.
+2025-08-01 21:03:54,048 - INFO     - [phase1_list_scraper_naukri.py:517] - Saving Naukri DataFrame (120 rows) to Excel...
+2025-08-01 21:03:54,223 - INFO     - [phase1_list_scraper_naukri.py:520] - Successfully saved Naukri Excel file: C:\AI Use and Deveopment\Naukri Job hunting\naukri_jobs_master_list.xlsx
+2025-08-01 21:03:54,224 - INFO     - [phase1_list_scraper_naukri.py:574] - Phase 1 (Naukri) Summary: Added 40 unique jobs to Excel. Skipped 0 duplicates.
+2025-08-01 21:03:54,225 - INFO     - [phase1_list_scraper_naukri.py:575] - Phase 1 (Naukri) completed.
+2025-08-01 21:03:54,225 - INFO     - [main_workflow_naukri.py:506] - --- Phase 1 (Naukri) Completed (Added: 40, Skipped Duplicates: 0) ---
+2025-08-01 21:03:54,226 - INFO     - [main_workflow_naukri.py:509] - Phase 1 (Naukri) duration: 57.07s.
+2025-08-01 21:03:54,226 - INFO     - [main_workflow_naukri.py:515] - --- Phase 2: Scrape Job Details (Naukri) ---
+2025-08-01 21:03:54,227 - INFO     - [phase2_detail_scraper_naukri.py:260] - Initiating Phase 2: Naukri Job Detail Scraping
+2025-08-01 21:03:54,227 - INFO     - [phase1_list_scraper_naukri.py:59] - Attempting to connect to existing Chrome on port 9222 using ChromeDriver: C:\AI Use and Deveopment\chromedriver-win64\chromedriver.exe
+2025-08-01 21:03:55,137 - INFO     - [phase1_list_scraper_naukri.py:72] - Successfully connected to Chrome debugger.
+2025-08-01 21:03:55,654 - INFO     - [phase1_list_scraper_naukri.py:76] - Initial page in connected browser: https://www.naukri.com/sql-support-sql-developer-jobs-in-pune-2?jobAge=1&experience=2
+2025-08-01 21:03:55,655 - INFO     - [phase2_detail_scraper_naukri.py:197] - Starting detailed scraping. Overwrite Phase 1 data: False
+2025-08-01 21:03:55,771 - INFO     - [phase2_detail_scraper_naukri.py:213] - Found 88 rows to process with status in ['New', 'Error - Scrape Job Details'].
+2025-08-01 21:03:55,772 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 28/121 | Job: 'Alternative Research Analyst' ---
+2025-08-01 21:04:16,304 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-alternative-research-analyst-iss-corporate-solutions-mumbai-2-to-3-years-150525502023: TimeoutException
+2025-08-01 21:04:16,306 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:04:16,307 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 31/121 | Job: 'Sovereign Research Analyst' ---
+2025-08-01 21:04:37,024 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-sovereign-research-analyst-iss-corporate-solutions-mumbai-2-to-3-years-120525501750: TimeoutException
+2025-08-01 21:04:37,026 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:04:37,027 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 32/121 | Job: 'Research Analyst' ---
+2025-08-01 21:04:57,688 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-research-analyst-viral-fission-mumbai-1-to-4-years-011122500926: TimeoutException
+2025-08-01 21:04:57,691 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:04:57,692 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 33/121 | Job: 'Research Analyst' ---
+2025-08-01 21:05:18,321 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-research-analyst-super-scholar-mumbai-3-to-10-years-110625500863: TimeoutException
+2025-08-01 21:05:18,323 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:05:18,324 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 35/121 | Job: 'Research Analyst' ---
+2025-08-01 21:05:38,849 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-research-analyst-datamatics-business-solutions-ltd-mumbai-3-to-8-years-120625500994: TimeoutException
+2025-08-01 21:05:38,850 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:05:38,851 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 5 rows...
+2025-08-01 21:05:39,041 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 37/121 | Job: 'Data Analyst' ---
+2025-08-01 21:05:59,439 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-data-analyst-ornella-enterprises-mumbai-all-areas-0-to-2-years-130625010377: TimeoutException
+2025-08-01 21:05:59,441 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:05:59,442 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 40/121 | Job: 'Data Analyst' ---
+2025-08-01 21:06:20,193 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-data-analyst-ashkom-mumbai-all-areas-1-to-5-years-280525923310: TimeoutException
+2025-08-01 21:06:20,195 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:06:20,196 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 41/121 | Job: 'Hdfc Bank - Digital Banking - Data Scientist - Generative AI' ---
+2025-08-01 21:06:40,550 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-hdfc-bank-digital-banking-data-scientist-generative-ai-hdfc-bank-mumbai-all-areas-4-to-9-years-100625020226: TimeoutException
+2025-08-01 21:06:40,552 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:06:40,552 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 42/121 | Job: 'ETL Test Engineer' ---
+2025-08-01 21:06:45,417 - INFO     - [phase2_detail_scraper_naukri.py:235] -   Successfully processed. Status -> Ready for AI
+2025-08-01 21:06:45,418 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 43/121 | Job: 'Data Engineer-Data Integration' ---
+2025-08-01 21:07:06,161 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-data-engineer-data-integration-ibm-india-pvt-limited-pune-2-to-5-years-120625932974: TimeoutException
+2025-08-01 21:07:06,163 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:07:06,164 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 10 rows...
+2025-08-01 21:07:06,352 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 44/121 | Job: 'Data Engineer-Data Platforms' ---
+2025-08-01 21:07:27,312 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-data-engineer-data-platforms-ibm-india-pvt-limited-pune-2-to-5-years-120625932835: TimeoutException
+2025-08-01 21:07:27,313 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:07:27,314 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 45/121 | Job: 'Senior Full Stack Engineer' ---
+2025-08-01 21:07:47,691 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-senior-full-stack-engineer-dynamic-yield-by-mastercard-pune-2-to-7-years-120625501938: TimeoutException
+2025-08-01 21:07:47,693 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:07:47,694 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 46/121 | Job: 'Software Engineer (Microsoft 365 & Azure)' ---
+2025-08-01 21:08:08,077 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-software-engineer-microsoft-365-azure-luxoft-india-llp-pune-2-to-7-years-120625933968: TimeoutException
+2025-08-01 21:08:08,079 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:08:08,080 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 47/121 | Job: 'Application Developer' ---
+2025-08-01 21:08:28,511 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-application-developer-accenture-solutions-pvt-ltd-pune-2-to-7-years-120625927481: TimeoutException
+2025-08-01 21:08:28,513 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:08:28,514 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 48/121 | Job: 'Data Engineer-Data Integration' ---
+2025-08-01 21:08:49,311 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-data-engineer-data-integration-ibm-india-pvt-limited-pune-2-to-5-years-120625932775: TimeoutException
+2025-08-01 21:08:49,313 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:08:49,327 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 15 rows...
+2025-08-01 21:08:49,504 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 49/121 | Job: 'Kanta Operator (Weighbridge Operator)' ---
+2025-08-01 21:09:10,296 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-kanta-operator-weighbridge-operator-bl-aggarwal-infra-pune-boravale-pune-1-to-3-years-130625015804: TimeoutException
+2025-08-01 21:09:10,298 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:09:10,299 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 50/121 | Job: 'Software Test Engineer - Manual Testing' ---
+2025-08-01 21:09:31,037 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-software-test-engineer-manual-testing-maimsd-technology-pune-2-to-5-years-120625935161: TimeoutException
+2025-08-01 21:09:31,039 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:09:31,039 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 51/121 | Job: 'C++ Developer' ---
+2025-08-01 21:09:51,760 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-c-developer-expleo-group-pune-1-to-4-years-120625502169: TimeoutException
+2025-08-01 21:09:51,762 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:09:51,763 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 52/121 | Job: 'Backend Engineer' ---
+2025-08-01 21:10:12,678 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-backend-engineer-bluphlux-pune-0-to-2-years-120625500693: TimeoutException
+2025-08-01 21:10:12,680 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:10:12,681 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 53/121 | Job: 'Financial Analyst' ---
+2025-08-01 21:10:33,465 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-financial-analyst-ecolab-life-sciences-pune-2-to-3-years-120625500215: TimeoutException
+2025-08-01 21:10:33,467 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_TimeoutException
+2025-08-01 21:10:33,467 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 20 rows...
+2025-08-01 21:10:33,682 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 54/121 | Job: 'Software Engineer- Front End' ---
+2025-08-01 21:17:15,303 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-software-engineer-front-end-zensoft-services-pvt-ltd-pune-2-to-5-years-120625031524: InvalidSessionIdException
+2025-08-01 21:17:15,312 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,312 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 55/121 | Job: 'Data Engineer' ---
+2025-08-01 21:17:15,338 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-data-engineer-atyeti-pune-2-to-4-years-120625011459: InvalidSessionIdException
+2025-08-01 21:17:15,340 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,341 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 56/121 | Job: 'Placement Officer / Training Officer' ---
+2025-08-01 21:17:15,346 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-placement-officer-training-officer-magic-bus-pune-1-to-6-years-300425919190: InvalidSessionIdException
+2025-08-01 21:17:15,348 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,348 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 57/121 | Job: 'Audit Executive- Chartered Accountant (CA)' ---
+2025-08-01 21:17:15,353 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-audit-executive-chartered-accountant-ca-fulcrum-worldwide-software-pune-2-to-7-years-280525020861: InvalidSessionIdException
+2025-08-01 21:17:15,354 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,355 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 58/121 | Job: 'R2R Reconciliation - Analyst' ---
+2025-08-01 21:17:15,359 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-r2r-reconciliation-analyst-black-and-white-business-solutions-pune-2-to-6-years-130625011079: InvalidSessionIdException
+2025-08-01 21:17:15,360 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,361 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 25 rows...
+2025-08-01 21:17:15,690 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 59/121 | Job: 'Medical Reviewer Hiring !!! Global Giant MNC , CTC 24Lpa :: Hurry Call' ---
+2025-08-01 21:17:15,693 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-medical-reviewer-hiring-global-giant-mnc-ctc-24lpa-hurry-call-you-i-consulting-pune-chennai-mumbai-all-areas-1-to-6-years-130625010593: InvalidSessionIdException
+2025-08-01 21:17:15,694 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,695 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 60/121 | Job: 'Technical Support/ Customer Support , sal up To 4.5 lpa' ---
+2025-08-01 21:17:15,698 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-technical-support-customer-support-sal-up-to-4-5-lpa-creative-hands-hr-hyderabad-pune-chennai-0-to-5-years-130625010271: InvalidSessionIdException
+2025-08-01 21:17:15,699 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,700 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 61/121 | Job: 'Hiring For AI Developer' ---
+2025-08-01 21:17:15,703 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-hiring-for-ai-developer-acceltree-softwares-pune-2-to-6-years-130225008081: InvalidSessionIdException
+2025-08-01 21:17:15,704 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,705 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 62/121 | Job: 'Data Analyst' ---
+2025-08-01 21:17:15,708 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-data-analyst-bp-incorporate-international-pune-1-to-3-years-120625503039: InvalidSessionIdException
+2025-08-01 21:17:15,709 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,710 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 63/121 | Job: 'Junior Engineer' ---
+2025-08-01 21:17:15,713 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-junior-engineer-cornerstone-india-pune-0-to-2-years-120625503035: InvalidSessionIdException
+2025-08-01 21:17:15,714 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,715 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 30 rows...
+2025-08-01 21:17:15,965 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 64/121 | Job: 'Starburst Engineer' ---
+2025-08-01 21:17:15,968 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-starburst-engineer-luxoft-india-llp-pune-0-to-4-years-120625933913: InvalidSessionIdException
+2025-08-01 21:17:15,970 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,971 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 65/121 | Job: 'Senior Business Analyst' ---
+2025-08-01 21:17:15,973 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-senior-business-analyst-bp-incorporate-international-pune-1-to-4-years-120625503044: InvalidSessionIdException
+2025-08-01 21:17:15,975 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,976 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 66/121 | Job: 'Data Platform Engineer' ---
+2025-08-01 21:17:15,978 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-data-platform-engineer-accenture-solutions-pvt-ltd-pune-2-to-7-years-120625928497: InvalidSessionIdException
+2025-08-01 21:17:15,980 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,981 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 67/121 | Job: 'Application Developer' ---
+2025-08-01 21:17:15,983 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-application-developer-accenture-solutions-pvt-ltd-pune-2-to-7-years-120625925925: InvalidSessionIdException
+2025-08-01 21:17:15,984 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,985 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 68/121 | Job: 'Application Developer' ---
+2025-08-01 21:17:15,987 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-application-developer-accenture-solutions-pvt-ltd-pune-2-to-7-years-120625926283: InvalidSessionIdException
+2025-08-01 21:17:15,989 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:15,990 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 35 rows...
+2025-08-01 21:17:16,183 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 69/121 | Job: 'Application Developer' ---
+2025-08-01 21:17:16,186 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-application-developer-accenture-solutions-pvt-ltd-pune-2-to-7-years-120625927180: InvalidSessionIdException
+2025-08-01 21:17:16,188 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:16,188 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 70/121 | Job: 'Application Developer' ---
+2025-08-01 21:17:16,191 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-application-developer-accenture-solutions-pvt-ltd-pune-2-to-7-years-120625923158: InvalidSessionIdException
+2025-08-01 21:17:16,193 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:16,194 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 71/121 | Job: 'Java Developer' ---
+2025-08-01 21:17:16,197 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-java-developer-diverse-lynx-pune-2-to-7-years-120625502767: InvalidSessionIdException
+2025-08-01 21:17:16,198 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:16,199 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 72/121 | Job: 'Senior Enterprise Technology Engineer' ---
+2025-08-01 21:17:16,202 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-senior-enterprise-technology-engineer-bp-incorporate-international-pune-2-to-5-years-120625503046: InvalidSessionIdException
+2025-08-01 21:17:16,204 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:16,205 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 73/121 | Job: 'Associate Technical Architect - Collaboration (CO2)' ---
+2025-08-01 21:17:16,208 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-associate-technical-architect-collaboration-co2-microland-limited-pune-2-to-5-years-120625503066: InvalidSessionIdException
+2025-08-01 21:17:16,210 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:16,210 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 40 rows...
+2025-08-01 21:17:18,601 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 74/121 | Job: 'Reviewer Engagement Associate' ---
+2025-08-01 21:17:18,603 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-reviewer-engagement-associate-springer-healthcare-pune-2-to-5-years-120625502609: InvalidSessionIdException
+2025-08-01 21:17:18,605 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:18,606 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 75/121 | Job: 'Application Automation Engineer' ---
+2025-08-01 21:17:18,609 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-application-automation-engineer-accenture-solutions-pvt-ltd-pune-2-to-7-years-120625929403: InvalidSessionIdException
+2025-08-01 21:17:18,610 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:18,611 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 76/121 | Job: 'Quality Engineer-Automation' ---
+2025-08-01 21:17:18,614 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-quality-engineer-automation-ibm-india-pvt-limited-pune-2-to-6-years-120625932862: InvalidSessionIdException
+2025-08-01 21:17:18,615 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:18,616 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 77/121 | Job: 'Reference Data Analyst' ---
+2025-08-01 21:17:18,619 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-reference-data-analyst-jp-morgan-chase-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-7-years-120625503419: InvalidSessionIdException
+2025-08-01 21:17:18,621 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:18,622 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 78/121 | Job: 'Associate Specialist, Legal Services' ---
+2025-08-01 21:17:18,625 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-associate-specialist-legal-services-mastercard-pune-2-to-3-years-120625503179: InvalidSessionIdException
+2025-08-01 21:17:18,626 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:18,626 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 45 rows...
+2025-08-01 21:17:18,836 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 79/121 | Job: 'Senior Product Designer' ---
+2025-08-01 21:17:18,839 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-senior-product-designer-bp-incorporate-international-pune-2-to-5-years-120625503048: InvalidSessionIdException
+2025-08-01 21:17:18,840 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:18,841 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 80/121 | Job: 'CS / Semi qualified CS' ---
+2025-08-01 21:17:18,843 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-cs-semi-qualified-cs-apl-business-services-llp-pune-91springboard-yerwada-2-to-5-years-120625924556: InvalidSessionIdException
+2025-08-01 21:17:18,844 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:18,845 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 81/121 | Job: 'GN - SONG - Service - Amazon Connect Platforms  Analyst' ---
+2025-08-01 21:17:18,847 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-gn-song-service-amazon-connect-platforms-analyst-accenture-solutions-pvt-ltd-pune-2-to-7-years-120625930656: InvalidSessionIdException
+2025-08-01 21:17:18,848 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:18,849 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 82/121 | Job: 'Sql Developer' ---
+2025-08-01 21:17:18,851 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-sql-developer-kp-hr-and-infra-services-pune-1-to-4-years-010825024778: InvalidSessionIdException
+2025-08-01 21:17:18,853 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:18,854 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 83/121 | Job: 'Software Engineer' ---
+2025-08-01 21:17:18,857 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-software-engineer-atlasrtx-pune-1-to-3-years-010825500702: InvalidSessionIdException
+2025-08-01 21:17:18,858 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:18,858 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 50 rows...
+2025-08-01 21:17:19,058 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 84/121 | Job: 'Data engineer - PL/SQL' ---
+2025-08-01 21:17:19,061 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-data-engineer-pl-sql-testq-technologies-limited-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-5-years-010825505291: InvalidSessionIdException
+2025-08-01 21:17:19,063 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,063 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 85/121 | Job: 'Technical Business Analyst' ---
+2025-08-01 21:17:19,066 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-technical-business-analyst-barclays-shared-services-pune-1-to-5-years-310725500775: InvalidSessionIdException
+2025-08-01 21:17:19,067 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,068 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 86/121 | Job: 'Business Analyst II' ---
+2025-08-01 21:17:19,070 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-business-analyst-ii-the-toro-company-pune-0-to-2-years-010825503278: InvalidSessionIdException
+2025-08-01 21:17:19,072 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,073 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 87/121 | Job: 'Senior Test Engineer - Investment Data Platform' ---
+2025-08-01 21:17:19,076 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-senior-test-engineer-investment-data-platform-m-g-plc-mumbai-pune-1-to-4-years-010825505299: InvalidSessionIdException
+2025-08-01 21:17:19,077 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,078 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 88/121 | Job: 'Developer' ---
+2025-08-01 21:17:19,080 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-developer-barclays-shared-services-pune-1-to-9-years-010825500075: InvalidSessionIdException
+2025-08-01 21:17:19,081 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,081 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 55 rows...
+2025-08-01 21:17:19,267 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 89/121 | Job: 'Developer - Business Intelligence' ---
+2025-08-01 21:17:19,270 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-developer-business-intelligence-anixter-pune-2-to-4-years-010825504626: InvalidSessionIdException
+2025-08-01 21:17:19,271 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,272 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 90/121 | Job: 'Data Quality Profiling Developer (Oracle APEX)' ---
+2025-08-01 21:17:19,274 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-data-quality-profiling-developer-oracle-apex-luxoft-india-llp-mumbai-pune-chennai-2-to-4-years-010825911828: InvalidSessionIdException
+2025-08-01 21:17:19,275 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,276 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 91/121 | Job: 'Senior Associate_Azure Data Engineer' ---
+2025-08-01 21:17:19,278 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-senior-associate-azure-data-engineer-pricewaterhouse-coopers-service-delivery-center-kolkata-pune-2-to-6-years-010825503144: InvalidSessionIdException
+2025-08-01 21:17:19,279 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,280 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 92/121 | Job: 'Application Developer' ---
+2025-08-01 21:17:19,283 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-application-developer-accenture-solutions-pvt-ltd-pune-2-to-7-years-010825927394: InvalidSessionIdException
+2025-08-01 21:17:19,284 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,285 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 93/121 | Job: 'Engineer, Sanctions & Embargo Screening, AS' ---
+2025-08-01 21:17:19,288 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-engineer-sanctions-embargo-screening-as-deutsche-bank-ag-pune-2-to-6-years-310725908496: InvalidSessionIdException
+2025-08-01 21:17:19,289 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,290 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 60 rows...
+2025-08-01 21:17:19,517 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 94/121 | Job: 'Staff enterprise technology engineer' ---
+2025-08-01 21:17:19,519 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-staff-enterprise-technology-engineer-bp-incorporate-international-pune-2-to-4-years-010825503213: InvalidSessionIdException
+2025-08-01 21:17:19,520 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,521 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 95/121 | Job: 'Datadog Developer' ---
+2025-08-01 21:17:19,523 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-datadog-developer-jade-global-software-pvt-ltd-kolkata-hyderabad-pune-2-to-7-years-010825916719: InvalidSessionIdException
+2025-08-01 21:17:19,524 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,524 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 96/121 | Job: 'Reltio Test Engineer' ---
+2025-08-01 21:17:19,527 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-reltio-test-engineer-micro1-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-6-years-310725501725: InvalidSessionIdException
+2025-08-01 21:17:19,528 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,528 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 97/121 | Job: 'Software Engineer( Dot net, Angular)' ---
+2025-08-01 21:17:19,531 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-software-engineer-dot-net-angular-nice-interactive-pune-2-to-4-years-010825022602: InvalidSessionIdException
+2025-08-01 21:17:19,532 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,533 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 98/121 | Job: 'Azure - Cloud and Data Centre Services Specialist' ---
+2025-08-01 21:17:19,535 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-azure-cloud-and-data-centre-services-specialist-hitachidigital-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-7-years-010825505697: InvalidSessionIdException
+2025-08-01 21:17:19,536 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,537 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 65 rows...
+2025-08-01 21:17:19,758 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 99/121 | Job: 'S&C GN - SC&O - S&P - Business Solutions -  Analyst' ---
+2025-08-01 21:17:19,761 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-s-c-gn-sc-o-s-p-business-solutions-analyst-accenture-solutions-pvt-ltd-pune-2-to-5-years-010825928309: InvalidSessionIdException
+2025-08-01 21:17:19,762 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,762 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 100/121 | Job: 'Data Scientist' ---
+2025-08-01 21:17:19,765 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-data-scientist-bp-incorporate-international-pune-2-to-5-years-010825503212: InvalidSessionIdException
+2025-08-01 21:17:19,766 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,767 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 101/121 | Job: 'Siebel Developer' ---
+2025-08-01 21:17:19,769 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-siebel-developer-paralucent-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-6-years-310725501701: InvalidSessionIdException
+2025-08-01 21:17:19,771 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,771 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 102/121 | Job: 'SAP PI /PO Developer' ---
+2025-08-01 21:17:19,774 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-sap-pi-po-developer-world-courier-pune-2-to-7-years-010825505189: InvalidSessionIdException
+2025-08-01 21:17:19,776 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,777 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 103/121 | Job: 'SAP ABAP Developer ECC' ---
+2025-08-01 21:17:19,779 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-sap-abap-developer-ecc-world-courier-pune-2-to-5-years-010825505187: InvalidSessionIdException
+2025-08-01 21:17:19,780 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,781 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 70 rows...
+2025-08-01 21:17:19,969 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 104/121 | Job: 'Functional Analyst' ---
+2025-08-01 21:17:19,972 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-functional-analyst-stantec-pune-2-to-6-years-010825501226: InvalidSessionIdException
+2025-08-01 21:17:19,973 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,973 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 105/121 | Job: 'LoanIQ/Senior Software Engineer' ---
+2025-08-01 21:17:19,976 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-loaniq-senior-software-engineer-hsbc-electronic-data-processing-india-pvt-ltd-pune-2-to-11-years-010825500124: InvalidSessionIdException
+2025-08-01 21:17:19,977 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,978 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 106/121 | Job: 'App Dev & Support Engineer III' ---
+2025-08-01 21:17:19,981 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-app-dev-support-engineer-iii-conduent-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-6-years-310725502104: InvalidSessionIdException
+2025-08-01 21:17:19,983 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,983 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 107/121 | Job: 'IICS Developer' ---
+2025-08-01 21:17:19,986 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-iics-developer-jade-global-software-pvt-ltd-pune-2-to-5-years-010825926658: InvalidSessionIdException
+2025-08-01 21:17:19,988 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,988 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 108/121 | Job: 'SQL Developer' ---
+2025-08-01 21:17:19,991 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-sql-developer-xcaliber-infotech-pvt-ltd-pune-2-to-4-years-010825923376: InvalidSessionIdException
+2025-08-01 21:17:19,992 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:19,993 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 75 rows...
+2025-08-01 21:17:20,203 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 109/121 | Job: 'Reporting Developer - Watlow' ---
+2025-08-01 21:17:20,206 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-reporting-developer-watlow-jade-global-software-pvt-ltd-hyderabad-pune-2-to-5-years-010825926297: InvalidSessionIdException
+2025-08-01 21:17:20,208 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:20,208 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 110/121 | Job: 'Sr Reporting Developer - Watlow' ---
+2025-08-01 21:17:20,211 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-sr-reporting-developer-watlow-jade-global-software-pvt-ltd-hyderabad-pune-2-to-5-years-010825918544: InvalidSessionIdException
+2025-08-01 21:17:20,212 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:20,213 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 111/121 | Job: 'Senior Human Resources Associate - Payroll' ---
+2025-08-01 21:17:20,215 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-senior-human-resources-associate-payroll-zs-associates-india-pvt-ltd-pune-2-to-5-years-310725927067: InvalidSessionIdException
+2025-08-01 21:17:20,217 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:20,218 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 112/121 | Job: 'Workday Integration Professional - Cross Hire' ---
+2025-08-01 21:17:20,220 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-workday-integration-professional-cross-hire-jade-global-software-pvt-ltd-hyderabad-pune-2-to-6-years-010825916736: InvalidSessionIdException
+2025-08-01 21:17:20,222 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:20,223 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 113/121 | Job: 'Service Business Analyst' ---
+2025-08-01 21:17:20,225 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-service-business-analyst-cummins-india-ltd-pune-2-to-5-years-310725917949: InvalidSessionIdException
+2025-08-01 21:17:20,226 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:20,227 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 80 rows...
+2025-08-01 21:17:20,422 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 114/121 | Job: 'SQL Server Developer' ---
+2025-08-01 21:17:20,425 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-sql-server-developer-maimsd-technology-pune-2-to-7-years-010825924457: InvalidSessionIdException
+2025-08-01 21:17:20,426 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:20,427 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 115/121 | Job: 'SAP Executive' ---
+2025-08-01 21:17:20,429 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-sap-executive-prasa-infocom-pune-2-to-4-years-010825921378: InvalidSessionIdException
+2025-08-01 21:17:20,431 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:20,432 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 116/121 | Job: 'Snowflake Data Engineer' ---
+2025-08-01 21:17:20,435 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-snowflake-data-engineer-jade-global-software-pvt-ltd-hyderabad-pune-2-to-3-years-010825920989: InvalidSessionIdException
+2025-08-01 21:17:20,437 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:20,438 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 117/121 | Job: 'Software Development Engineer- II Fullstack' ---
+2025-08-01 21:17:20,441 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-software-development-engineer-ii-fullstack-mindtickle-inc-pune-2-to-6-years-010825503382: InvalidSessionIdException
+2025-08-01 21:17:20,443 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:20,444 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 118/121 | Job: 'Junior/Senior Java Developer' ---
+2025-08-01 21:17:20,447 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-junior-senior-java-developer-dataeconomy-pune-1-to-4-years-010825502566: InvalidSessionIdException
+2025-08-01 21:17:20,448 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:20,449 - INFO     - [phase2_detail_scraper_naukri.py:243] - Saving progress to Excel after 85 rows...
+2025-08-01 21:17:20,636 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 119/121 | Job: 'LIMS Master Data Specialist' ---
+2025-08-01 21:17:20,639 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-lims-master-data-specialist-avantor-performance-materials-india-private-limited-pune-1-to-6-years-310725928655: InvalidSessionIdException
+2025-08-01 21:17:20,640 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:20,641 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 120/121 | Job: 'Business Technology Solutions Associate Consultant - Knowledge Graph' ---
+2025-08-01 21:17:20,644 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-business-technology-solutions-associate-consultant-knowledge-graph-zs-associates-india-pvt-ltd-pune-gurugram-bengaluru-2-to-5-years-310725927131: InvalidSessionIdException
+2025-08-01 21:17:20,646 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:20,647 - INFO     - [phase2_detail_scraper_naukri.py:224] - --- Processing Row 121/121 | Job: 'Performance Engineer' ---
+2025-08-01 21:17:20,650 - ERROR    - [phase2_detail_scraper_naukri.py:179] - Major scraping error on page https://www.naukri.com/job-listings-performance-engineer-zs-associates-india-pvt-ltd-pune-2-to-5-years-310725927116: InvalidSessionIdException
+2025-08-01 21:17:20,652 - ERROR    - [phase2_detail_scraper_naukri.py:239] -   Scraping failed. Issues: CRITICAL_InvalidSessionIdException
+2025-08-01 21:17:20,652 - INFO     - [phase2_detail_scraper_naukri.py:246] - Finished processing all designated rows. Performing final save...
+2025-08-01 21:17:20,858 - INFO     - [phase2_detail_scraper_naukri.py:277] - Phase 2 run finished.
+2025-08-01 21:17:20,858 - INFO     - [main_workflow_naukri.py:519] - --- Phase 2 (Naukri) Completed ---
+2025-08-01 21:17:20,859 - INFO     - [main_workflow_naukri.py:522] - Phase 2 (Naukri) duration: 806.63s.
+2025-08-01 21:17:20,859 - INFO     - [main_workflow_naukri.py:577] - #################################################
+2025-08-01 21:17:20,860 - INFO     - [main_workflow_naukri.py:578] - Naukri Workflow Completed (Phases 1-2).
+2025-08-01 21:17:20,860 - INFO     - [main_workflow_naukri.py:580] - Review log file for detailed information.
+2025-08-01 21:17:20,861 - INFO     - [main_workflow_naukri.py:581] - #################################################
+2025-08-01 21:17:20,861 - INFO     - [main_workflow_naukri.py:611] - Total Naukri Workflow Runtime: 884.63 seconds.
+2025-08-01 21:17:20,862 - INFO     - [main_workflow_naukri.py:612] - Phase Durations (seconds): {'Phase 1': 57.07408547401428, 'Phase 2': 806.6322119235992}
+2025-08-01 21:17:20,862 - INFO     - [main_workflow_naukri.py:613] - Naukri script execution finished.
